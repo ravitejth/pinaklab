@@ -2,9 +2,6 @@
 node_modules
 jspm_packages
 npm-debug.*
-*.js.map
-e2e/**/*.js
-e2e/**/*.js.map
-_test-output
 _temp
 /_dist/
+.DS_Store

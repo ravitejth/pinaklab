@@ -2,15 +2,15 @@
 
 // CONSTANTS
 const ENV         = process.env.NODE_ENV,
-  isProd      = ENV !== 'development' && ENV !== 'dev-sim' && ENV !== 'dev-tst',
+  isProd      = ENV == 'production',
   path        = require('path'),
   webpack     = require('webpack');
 
 // PLUGINS
 const CopyWebpackPlugin     = require('copy-webpack-plugin'),
-  DashboardPlugin           = require('webpack-dashboard/plugin'),
   HtmlWebpackPlugin         = require('html-webpack-plugin'),
   HtmlWebpackPugPlugin      = require('html-webpack-pug-plugin'),
+  ExtractTextPlugin = require("extract-text-webpack-plugin"),
   ImageminPlugin            = require('imagemin-webpack-plugin').default,
   ProgressBarPlugin         = require('progress-bar-webpack-plugin');
 
@@ -19,6 +19,13 @@ var config = {
   context: path.join(__dirname, '..'),
 
   progress: true,
+  // OTHER SETTINGS
+  engines: {
+    css: 'sass',
+    html: 'pug'
+  },
+
+  prettify: true,
 
   devServer: {
     noInfo: true,
@@ -56,10 +63,7 @@ var config = {
       },
       { // SASS
         test: /\.scss$/,
-        loaders: [
-          'raw',
-          'sass-loader?sourceMap'
-        ]
+        loaders: [ ExtractTextPlugin.extract('style!sass'),'raw', 'sass-loader?sourceMap']
       },
       { // TYPESCRIPT
         test: /\.ts$/,
@@ -71,6 +75,10 @@ var config = {
         ]
       }
     ]
+  },
+
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, '../client/stylesheets')]
   },
 
   // OUTPUT FILE
@@ -105,10 +113,7 @@ var config = {
     new ProgressBarPlugin(),
 
     // ADD VENDOR MODULES TO SEPARATE FILE
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'common.js', Infinity),
-
-    // TERMINAL DASHBOARD
-    new DashboardPlugin()
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'common.js', Infinity)
 
   ],
 
@@ -123,7 +128,7 @@ var config = {
 // ENV SPECIFIC SETTINGS
 if (isProd) {
 
-  console.log('SERVING STATIC FILES');
+  console.log('SERVING PRODUCTION BUILD');
 
   config.devtool = 'cheap-module-source-map';
 
@@ -171,11 +176,13 @@ if (isProd) {
     // Copy assets from the public folder
     // Reference: https://github.com/kevlened/copy-webpack-plugin
     new CopyWebpackPlugin([{
-      from: path.resolve(__dirname, '../public')
+      from: './public'
     }])
   );
 
 } else {
+
+  console.log('SERVING DEVELOPMENT BUILD ');
 
   config.devtool = 'inline-source-map';
 
@@ -192,15 +199,18 @@ if (isProd) {
 
   config.plugins.push(
 
-    new HtmlWebpackPlugin({
-      filetype: 'html',
-      filename: 'index.html',
-      template: './index.html',
-      chunksSortMode: 'dependency'
+    new ExtractTextPlugin('css/styles.css', {
+      allChunks: true
     }),
 
-    new HtmlWebpackPugPlugin()
+    new CopyWebpackPlugin([{
+      from: './public'
+    }]),
 
+    new HtmlWebpackPlugin({
+      filetype: 'pug',
+      template: 'index.pug'
+    })
   );
 
 }
