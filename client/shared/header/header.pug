@@ -1,0 +1,20 @@
+nav.navbar.navbar-default.navbar-fixed-top#mainNav
+    .container-fluid
+        //Brand and toggle get grouped for better mobile display
+        .navbar-header
+            button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
+                span.sr-only Toggle navigation Menu
+                i.fa.fa-bars
+            a.navbar-brand.page-scroll(href="#page-top") TEMPLATE NAME
+
+        // Collect the nav links, forms, and other content for toggling
+        .collapse.navbar-collapse#bs-example-navbar-collapse-1
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a.page-scroll(routerLink="/about") About
+                li
+                    a.page-scroll(href="services") Services
+                li
+                    a.page-scroll(href="portfolio") Portfolio
+                li
+                    a.page-scroll(href="contact") Contact
