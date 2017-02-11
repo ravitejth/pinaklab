@@ -106,8 +106,12 @@ var config = {
     }),
 
     new webpack.ProvidePlugin({
-      Hammer: 'hammerjs/hammer'
+      Hammer: 'hammerjs/hammer',
+      jQuery: 'jquery',
+      $: 'jquery',
+      jquery: 'jquery'
     }),
+
 
     // BETTER PROGRESS INDICATORS IN TERMINAL DURING BUILDS
     new ProgressBarPlugin(),
