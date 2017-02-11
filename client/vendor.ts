@@ -11,4 +11,4 @@ import 'rxjs';
 import 'jquery';
 import 'bootstrap/dist/js/bootstrap';
 import 'html5shiv';
-import 'respond.js/dest/respond.min.js';
+// import 'respond.js/dest/respond.min.js';
