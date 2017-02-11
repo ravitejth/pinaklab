@@ -1,1 +1,29 @@
 @import './creative';
+
+
+//loading animation
+#loading-svg {
+  width: 150px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+  animation: fade 2s ease-in-out infinite;
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.25;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

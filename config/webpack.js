@@ -138,7 +138,7 @@ if (isProd) {
       './client/vendor.ts'
     ],
     app: [
-      './client/app/app.module.ts',
+      'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&noInfo=true&reload=true',
       './client/main.ts'
     ]
   };

@@ -6,6 +6,8 @@ html
     title App
     base(href='/')
 
+
+    link(rel='icon', type='image/png' href='/favicon.png')
     link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
 
     script(src='https://code.jquery.com/jquery-2.2.4.min.js')
@@ -13,4 +15,6 @@ html
     script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
 
   body
-    app.fade-element-in Loading...
+    app.fade-element-in
+      img#loading-svg(src='./img/loading.gif', style='width:125px;')
+
