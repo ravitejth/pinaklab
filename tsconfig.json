@@ -1,22 +1,19 @@
 {
+  "buildOnSave": false,
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
+    "inlineSourceMap": true,
+    "sourceMap": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": [
-      "es2015",
-      "dom"
-    ],
+    "removeComments": false,
     "noImplicitAny": false,
-    "suppressImplicitAnyIndexErrors": true,
-    "compileOnSave": true,
-    "buildOnSave": true,
-    "awesomeTypescriptLoaderOptions": {
-      "forkChecker": true,
-      "useWebpackText": true
-    }
-  }
+    "types": ["node"],
+    "lib": ["es2016", "dom"]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }

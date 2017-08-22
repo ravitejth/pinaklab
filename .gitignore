@@ -3,5 +3,5 @@ node_modules
 jspm_packages
 npm-debug.*
 _temp
-/_dist/
+/dist/
 .DS_Store
