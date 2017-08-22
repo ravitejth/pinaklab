@@ -62,23 +62,11 @@ var config = {
         }
       },
       { // SASS
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          use: [
-            {
-              loader: "css-to-string-loader"
-            },
-            //{loader: 'raw-loader'},
-            {
-              loader: "css-loader" // translates CSS into CommonJS
-            },
-
-            {
-              loader: "sass-loader" // compiles Sass to CSS
-            }
-          ],
-          fallback: 'style-loader'
-        })
+        test: /\.(css|scss)$/,
+        use: ['to-string-loader'].concat(ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: [{loader: 'css-loader'}, {loader:'sass-loader'}]
+        }))
       },
       { // TYPESCRIPT
         test: /\.ts$/,
