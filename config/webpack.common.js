@@ -18,7 +18,6 @@ var config = {
       './client/vendor.ts'
     ],
     app: [
-      'webpack-hot-middleware/client?timeout=20000&noInfo=true&reload=true',
       './client/main.ts'
     ]
   },
@@ -89,7 +88,7 @@ var config = {
       allChunks: true,
       disable: false
     }),
-    new webpack.optimize.OccurrenceOrderPlugin(),
+
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
 

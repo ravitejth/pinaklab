@@ -1,9 +1,7 @@
-'use strict';
-
-var webpackMerge = require('webpack-merge');
-var commonConfig = require('./webpack.common.js');
-var path = require('path');
-var webpack     = require('webpack');
+const webpackMerge = require('webpack-merge'),
+  commonConfig = require('./webpack.common.js'),
+  path = require('path'),
+  webpack     = require('webpack');
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -19,7 +17,6 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoErrorsPlugin(),
   ],
 

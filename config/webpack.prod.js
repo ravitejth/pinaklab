@@ -1,7 +1,7 @@
-var webpackMerge = require('webpack-merge');
-var commonConfig = require('./webpack.common.js');
-var webpack = require('webpack');
-var path = require('path');
+const webpackMerge = require('webpack-merge'),
+  commonConfig = require('./webpack.common.js'),
+  webpack = require('webpack'),
+  path = require('path');
 
 module.exports = webpackMerge(commonConfig, {
 
@@ -13,7 +13,6 @@ module.exports = webpackMerge(commonConfig, {
       './client/vendor.ts'
     ],
     app: [
-      'webpack-hot-middleware/client?reload=true',
       './client/main.ts'
     ]
   },
