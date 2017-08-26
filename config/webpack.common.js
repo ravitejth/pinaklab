@@ -37,9 +37,9 @@ var config = {
     rules: [
       { // ASSETS
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use: {
+        use: [{
           loader: 'file-loader'
-        }
+        }]
       },
       { // HTML
         test: /\.html$/,

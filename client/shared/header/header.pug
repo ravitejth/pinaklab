@@ -1,20 +1,28 @@
-nav.navbar.navbar-default.navbar-fixed-top#mainNav
-    .container-fluid
-        //Brand and toggle get grouped for better mobile display
-        .navbar-header
-            button.navbar-toggle.collapsed(type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1")
-                span.sr-only Toggle navigation Menu
-                i.fa.fa-bars
-            a.navbar-brand.page-scroll(href="#page-top") TEMPLATE NAME
-
-        // Collect the nav links, forms, and other content for toggling
-        .collapse.navbar-collapse#bs-example-navbar-collapse-1
-            ul.nav.navbar-nav.navbar-right
-                li
-                    a.page-scroll(routerLink="/about") About
-                li
-                    a.page-scroll(href="services") Services
-                li
-                    a.page-scroll(href="portfolio") Portfolio
-                li
-                    a.page-scroll(href="contact") Contact
+nav#mainNav.navbar.navbar-expand-lg.navbar-light.fixed-top
+    .container
+      a.navbar-brand.js-scroll-trigger(routerLink='/') Start Bootstrap
+      button.navbar-toggler.navbar-toggler-right(
+        type='button',
+        data-toggle='collapse',
+        data-target='#navbarResponsive',
+        aria-controls='navbarResponsive',
+        aria-expanded='false',
+        aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+      .collapse.navbar-collapse#navbarResponsive
+        ul.navbar-nav.ml-auto
+          li.nav-item
+            a.nav-link.js-scroll-trigger(routerLink='/about') About
+          li.nav-item
+            a.nav-link.js-scroll-trigger(routerLink='/services') Services
+          li.nav-item
+            a.nav-link.js-scroll-trigger(routerLink='/portfolio') Portfolio
+          li.nav-item
+            a.nav-link.js-scroll-trigger(routerLink='/contact') Contact
+.header.masthead
+  .header-content
+    .header-content-inner
+      h1#homeHeading Your Favorite Source of Free Bootstrap Themes
+      hr
+      p Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!
+      a.btn.btn-primary.btn-xl.js-scroll-trigger(href='#about') Find Out More

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'header',
-    templateUrl: './header.pug'
+  selector: 'header',
+  styleUrls: [ 'header.scss'],
+  templateUrl: 'header.pug'
 })
 
-export class HeaderComponent  {
-    name = 'header';
+export class HeaderComponent {
+
 }
