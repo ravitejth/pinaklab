@@ -10,7 +10,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin'),
   HtmlWebpackPlugin = require('html-webpack-plugin'),
   ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-var config = {
+const config = {
 
   entry: {
     vendor: [
@@ -43,22 +43,15 @@ var config = {
       },
       { // HTML
         test: /\.html$/,
-        use: {
-          loader: 'html-loader'
-        }
-
+        use: { loader: 'html-loader' }
       },
       { // JSON
         test: /\.json$/,
-        use: {
-          loader: 'json-loader'
-        }
+        use: { loader: 'json-loader'}
       },
       { // PUG
         test: /\.pug$/,
-        use: {
-          loader: 'pug-html-loader'
-        }
+        use: {loader: 'pug-html-loader'}
       },
       { // SASS
         test: /\.(css|scss)$/,
@@ -70,9 +63,7 @@ var config = {
       { // TYPESCRIPT
         test: /\.ts$/,
         use: [
-          {
-            loader: 'awesome-typescript-loader'
-          },
+          {loader: 'awesome-typescript-loader'},
           {loader: 'angular2-template-loader'},
           {loader: '@angularclass/hmr-loader'},
           {loader: 'angular2-router-loader'}
