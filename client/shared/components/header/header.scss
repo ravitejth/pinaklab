@@ -1,4 +1,4 @@
-@import '../../stylesheets/index';
+@import '../../../stylesheets/index';
 
 // Styling for the navbar
 #mainNav {
@@ -176,7 +176,7 @@
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../../../public/img/header.jpg');
+  background-image: url('../../../../public/img/header.jpg');
   text-align: center;
   color: white;
 }

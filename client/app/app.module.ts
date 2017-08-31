@@ -8,6 +8,11 @@ import { SharedModule } from '../shared/shared.module';
 // ROUTING
 import { AppRoutingModule } from './app-routing.module';
 
+// SERVICES
+import { HttpService } from '../shared/services/http.service';
+import { DataService } from '../shared/services/data.service';
+import  { ConfigService } from '../shared/services/config.service';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -16,6 +21,10 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   declarations: [
     AppComponent
+  ],
+  providers: [
+    HttpService,
+    HttpService,
   ],
   bootstrap: [
     AppComponent
