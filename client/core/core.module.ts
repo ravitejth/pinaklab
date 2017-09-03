@@ -1,8 +1,9 @@
 import { NgModule }      from '@angular/core';
 
 //COMPONENTS
-import { HomeComponent }    from './home/home.component'
-import { AboutComponent }   from './about/about.component';
+import { HomeHeaderComponent }  from "./home/home-header/home-header.component";
+import { HomeComponent }        from './home/home.component';
+import { AboutComponent }       from './about/about.component';
 
 // ROUTING
 import { CoreRoutingModule } from './core-routing.module';
@@ -17,7 +18,8 @@ import { SharedModule } from '../shared/shared.module';
     ],
     declarations: [
       AboutComponent,
+      HomeHeaderComponent,
       HomeComponent
     ]
 })
-export class CoreModule { }
+export class CoreModule {}
