@@ -12,7 +12,20 @@ import { FooterComponent } from '../shared/components/footer/footer.component';
 export const routes: Routes = [
     {
         path: '',
-        component: HomeComponent,
+      children: [
+        {
+          path: '',
+          component: HeaderComponent,
+          outlet: 'Header',
+        }, {
+          path: '',
+          component: HomeComponent
+        }, {
+          path: '',
+          component: FooterComponent,
+          outlet: 'Footer',
+        },
+      ]
     },
     {
         path: 'about',

@@ -6,7 +6,6 @@ import { Observable } from 'rxjs/Rx';
 export class ConfigService {
 
   private config: Object = null;
-  private env:    Object = null;
 
   constructor(
     private http: Http
@@ -19,29 +18,19 @@ export class ConfigService {
     return this.config[key];
   }
 
-  /**
-   * Use to get the data found in the first file (env file)
-   */
-  public getEnv(key: any) {
-    return this.env[key];
-  }
+  get(){
+    let observable = new Observable(observer => {
 
-  /**
-   * This method:
-   *   a) Loads "env.json" to get the current working environment (e.g.: 'production', 'development')
-   *   b) Loads "config.[env].json" to get all env's variables (e.g.: 'config.development.json')
-   */
-  public load() {
-    return new Promise((resolve, reject) => {
-      this.http.get('config/app.config.json').map( res => res.json() ).catch((error: any):any => {
-        console.error('Error reading app.config.json configuration file');
-        resolve(error);
-        return Observable.throw(error.json().error || 'Server error');
-      }).subscribe( (responseData) => {
-        this.config = responseData;
-        resolve(true);
-      });
+      if (this.config) {
+        observer.next(this.config);
+      } else {
+        this.http.get('../../../public/config.json').subscribe((response: any) => {
+          this.config = response;
+          console.log(response);
+        });
+      } // end of else
+    }); // end of observable
+    return observable;
+  } // end of get()
 
-    });
-  }
 }

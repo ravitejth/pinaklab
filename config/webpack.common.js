@@ -85,6 +85,7 @@ const config = {
 
     new webpack.ProvidePlugin({
       Hammer: 'hammerjs/hammer',
+      'Popper': 'popper.js',
       jQuery: 'jquery',
       $: 'jquery',
       jquery: 'jquery'

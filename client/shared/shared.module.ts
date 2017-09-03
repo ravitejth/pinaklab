@@ -7,22 +7,22 @@ import { FormsModule }            from '@angular/forms';
 import { HeaderComponent }    from './components/header/header.component'
 import { FooterComponent }    from './components/footer/footer.component';
 import { NotFoundComponent }  from './components/not-found/not-found.component';
+import { LoginComponent}      from './components/login/login.component';
+
+import { AlertModule } from 'ngx-bootstrap';
 
 @NgModule({
   imports: [
     FormsModule,
     CommonModule,
-    RouterModule
-  ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    NotFoundComponent
+    RouterModule,
+    AlertModule.forRoot()
   ],
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
 })
 export class SharedModule { }

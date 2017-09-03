@@ -13,6 +13,14 @@ html
 
 
   body
+    // Preloader
+    .spinning-preloader-container
+      .spinning-preloader-elements
+      .preloader-wrapper.active
+      .showbox
+        .loader
+          svg.circular(viewbox='25 25 50 50')
+            circle.path(cx='50', cy='50', r='20', fill='none', stroke-width='2', stroke-miterlimit='10')
+    // App
     app.fade-element-in
-      img#loading-svg(src='./img/loading.gif', style='width:125px;')
 

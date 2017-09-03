@@ -1,14 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from  '@angular/router';
 
-//IMPORT COMPONENTS
-import { NotFoundComponent } from '../shared/components/not-found/not-found.component';
+// COMPONENTS
+import { LoginComponent}      from "../shared/components/login/login.component";
+import { NotFoundComponent }  from '../shared/components/not-found/not-found.component';
 
 // IMPORT ROUTES
 export const routes: Routes = [
   {
-      path: '',
-      loadChildren: '../core/core.module#CoreModule'
+    path: '',
+    loadChildren: '../core/core.module#CoreModule'
+  },
+  {
+    path: 'dashboard',
+    loadChildren: '../dashboard/dashboard.module#CoreModule'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
    path: '404',

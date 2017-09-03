@@ -18,7 +18,8 @@ export class DataService {
     private configService: ConfigService,
     private ngSpinningPreloader: NgSpinningPreloader
   ){
-    this.baseURL = this.configService.getConfig('baseURL');
+    //this.baseURL = this.configService.getConfig('baseURL');
+    this.baseURL = "https://google.com/"
   }
 
   get(url) {
