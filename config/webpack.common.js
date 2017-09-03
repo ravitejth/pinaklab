@@ -21,12 +21,6 @@ const config = {
       './client/main.ts'
     ]
   },
-  output: {
-    path: path.resolve(__dirname,'../dist'),
-    publicPath: '/',
-    filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
-  },
 
   resolve: {
     extensions: ['.ts', '.js']
@@ -83,13 +77,6 @@ const config = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
 
-    // NG2 HACK: angular/angular#11580
-    new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)@angular/,
-      path.resolve('../client'),
-      {}
-    ),
-
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': ENV
@@ -103,7 +90,7 @@ const config = {
       jquery: 'jquery'
     }),
 
-    // ADD VENDOR MODULES TO SEPARATE FILE
+    // Add vendor module to separate file
     new webpack.optimize.CommonsChunkPlugin(
       {
         name: 'vendor',
@@ -111,18 +98,10 @@ const config = {
       }
     ),
 
-
-
     // Copy assets from the public folder
-    // Reference: https://github.com/kevlened/copy-webpack-plugin
     new CopyWebpackPlugin([{
       from: './public'
     }]),
-
-    new webpack.ContextReplacementPlugin(
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-      path.resolve(__dirname, '../public')
-    ),
 
     new HtmlWebpackPlugin({
       filetype: 'pug',

@@ -45,6 +45,7 @@
     "node-sass": "^4.5.3",
     "path": "^0.12.7",
     "phantomjs-prebuilt": "^2.1.15",
+    "popper.js": "^1.12.5",
     "pug-html-loader": "1.0.10",
     "reflect-metadata": "^0.1.10",
     "respond.js": "^1.4.2",

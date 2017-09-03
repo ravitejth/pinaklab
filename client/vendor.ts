@@ -9,6 +9,7 @@ import '@angular/router';
 import 'rxjs';
 // Bootstrap
 import 'jquery';
+import 'popper.js';
 import 'bootstrap/dist/js/bootstrap';
 import 'html5shiv';
 // import 'respond.js/dest/respond.min.js';

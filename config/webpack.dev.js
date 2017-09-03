@@ -10,6 +10,7 @@ module.exports = webpackMerge(commonConfig, {
   // OUTPUT FILE
   output: {
     path: path.resolve(__dirname, '../dist'),
+    publicPath: '/',
     filename: '[name].[hash:8].js',
     sourceMapFilename: '[name].[hash:8].map',
     chunkFilename: '[id].[hash:8].js'
@@ -17,7 +18,7 @@ module.exports = webpackMerge(commonConfig, {
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin(),
+    new webpack.NoEmitOnErrorsPlugin()
   ],
 
   devServer: {
