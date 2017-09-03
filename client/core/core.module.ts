@@ -1,6 +1,5 @@
 import { NgModule }      from '@angular/core';
 
-
 //COMPONENTS
 import { HomeComponent }    from './home/home.component'
 import { AboutComponent }   from './about/about.component';
@@ -16,13 +15,9 @@ import { SharedModule } from '../shared/shared.module';
       CoreRoutingModule,
       SharedModule
     ],
-    exports: [
-      AboutComponent,
-      HomeComponent
-    ],
     declarations: [
       AboutComponent,
       HomeComponent
-    ],
+    ]
 })
 export class CoreModule { }
