@@ -22,4 +22,5 @@ import { SharedModule } from '../shared/shared.module';
       HomeComponent
     ]
 })
+
 export class CoreModule {}

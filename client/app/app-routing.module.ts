@@ -13,7 +13,7 @@ export const routes: Routes = [
   },
   {
     path: 'dashboard',
-    loadChildren: './../dashboard/dashboard.module#CoreModule'
+    loadChildren: './../dashboard/dashboard.module#DashboardModule'
   },
   {
     path: 'login',
