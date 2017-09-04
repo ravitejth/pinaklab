@@ -7,11 +7,7 @@ import '@angular/http';
 import '@angular/router';
 // RxJS
 import 'rxjs';
-// Bootstrap
-import 'jquery';
-import 'popper.js';
-import 'bootstrap/dist/js/bootstrap';
+
 import 'html5shiv';
-// import '../public/js/app.js';
-// import '../public/js/layout.js';
+
 // import 'respond.js/dest/respond.min.js';

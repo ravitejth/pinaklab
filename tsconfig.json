@@ -4,6 +4,7 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "commonjs",
+    "moduleResolution": "node",
     "inlineSourceMap": true,
     "sourceMap": false,
     "emitDecoratorMetadata": true,
@@ -12,7 +13,7 @@
     "noImplicitAny": false,
     "allowJs": true,
     "types": ["node"],
-    "lib": ["es2015", "dom"]
+    "lib": ["es2016", "dom"]
   },
   "exclude": [
     "node_modules"

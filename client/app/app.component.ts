@@ -1,6 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgSpinningPreloader } from 'ng2-spinning-preloader';
+//import * as DashboardCommon from 'DashboardCommon';
 
 @Component({
   selector: 'app',
@@ -26,7 +27,7 @@ export class AppComponent  {
   }
 
   ngAfterViewInit() {
-    //DashboardCommon.init();
+    App.init();
     Layout.init();
   }
 }

@@ -9,11 +9,11 @@ import { NotFoundComponent }  from '../shared/components/not-found/not-found.com
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: '../core/core.module#CoreModule'
+    loadChildren: './../core/core.module#CoreModule'
   },
   {
     path: 'dashboard',
-    loadChildren: '../dashboard/dashboard.module#CoreModule'
+    loadChildren: './../dashboard/dashboard.module#CoreModule'
   },
   {
     path: 'login',
