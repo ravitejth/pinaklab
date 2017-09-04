@@ -31,21 +31,21 @@ export class LoginComponent {
         msg: "Sorry. Please check email/password combination.",
         timeout: 2000
       });
-      "serviceWorker"in navigator && navigator.serviceWorker.register("sw.js").then(function() {
-        return navigator.serviceWorker.ready
-      }).then(function(reg) {
-        console.log("Service Worker is ready :^)", reg);
-        reg.pushManager.subscribe({
-          userVisibleOnly: !0
-        }).then(function(sub) {
-          console.log("endpoint:", sub);
-          this.authenticationService.sendSubscription(sub).subscribe(function(response) {})
-        }
-          .bind(this))
-      }
-        .bind(this)).catch(function(error) {
-        console.log("Service Worker error :^(", error)
-      });
+      // "serviceWorker"in navigator && navigator.serviceWorker.register("sw.js").then(function() {
+      //   return navigator.serviceWorker.ready
+      // }).then(function(reg) {
+      //   console.log("Service Worker is ready :^)", reg);
+      //   reg.pushManager.subscribe({
+      //     userVisibleOnly: !0
+      //   }).then(function(sub) {
+      //     console.log("endpoint:", sub);
+      //     this.authenticationService.sendSubscription(sub).subscribe(function(response) {})
+      //   }
+      //     .bind(this))
+      // }
+      //   .bind(this)).catch(function(error) {
+      //   console.log("Service Worker error :^(", error)
+      // });
       this.router.navigate([this.returnURL]);
     }, function(error) {
       this.alerts.push({

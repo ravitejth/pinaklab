@@ -24,4 +24,9 @@ export class AppComponent  {
       this.ngSpinningPreloader.stop();
     });
   }
+
+  ngAfterViewInit() {
+    //DashboardCommon.init();
+    Layout.init();
+  }
 }
