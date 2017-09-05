@@ -2,12 +2,19 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
+import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
 
 // Route Configuration
 export const routes: Routes = [
   {
     path: '',
     component: DashboardComponent,
+    children: [
+      {
+        path: '',
+        component: DashboardHomeComponent,
+      }
+    ]
   }
 ];
 

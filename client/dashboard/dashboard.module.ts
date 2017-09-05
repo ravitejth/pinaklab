@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 
 //COMPONENTS
 import { DashboardComponent }    from './dashboard.component';
+import { DashboardHomeComponent }    from './dashboard-home/dashboard-home.component';
 import { MainLayoutSidebarComponent} from './main-layout-sidebar/main-layout-sidebar.component';
 import { MainLayoutHeaderComponent} from  './main-layout-header/main-layout-header.component';
 import { MainLayoutFooterComponent} from  './main-layout-footer/main-layout-footer.component';
@@ -20,6 +21,7 @@ import { PageLayoutTopComponent} from  './page-layout-top/page-layout-top.compon
   ],
   declarations: [
     DashboardComponent,
+    DashboardHomeComponent,
     MainLayoutSidebarComponent,
     MainLayoutHeaderComponent,
     MainLayoutFooterComponent,
