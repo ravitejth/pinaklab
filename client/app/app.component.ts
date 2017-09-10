@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { NgSpinningPreloader } from 'ng2-spinning-preloader';
-//import * as DashboardCommon from 'DashboardCommon';
+import { ScriptLoaderService } from '../services/script-loader.service';
 
 @Component({
   selector: 'app',
@@ -13,10 +13,17 @@ import { NgSpinningPreloader } from 'ng2-spinning-preloader';
 export class AppComponent  {
   constructor(
     private router: Router,
-    private ngSpinningPreloader: NgSpinningPreloader
+    private ngSpinningPreloader: NgSpinningPreloader,
+    private _script: ScriptLoaderService
   ){}
 
   ngOnInit(){
+    // Loading Scripts dynamically
+    this._script.load('body', 'js/vendors.bundle.js', 'js/scripts.bundle.js')
+      .then(result => {
+        console.log(result);
+      });
+
     this.router.events.subscribe((event) => {
       if(!(event instanceof NavigationEnd)){
         return;
@@ -26,8 +33,5 @@ export class AppComponent  {
     });
   }
 
-  ngAfterViewInit() {
-    App.init();
-    Layout.init();
-  }
+
 }

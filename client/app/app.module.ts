@@ -10,10 +10,14 @@ import { SharedModule } from '../shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // SERVICES
-import { HttpService }    from '../shared/services/http.service';
-import { DataService }    from '../shared/services/data.service';
-import { ConfigService }  from '../shared/services/config.service';
-import { AuthService }    from "../shared/services/auth.service";
+import { HttpService }    from '../services/http.service';
+import { DataService }    from '../services/data.service';
+import { ConfigService }  from '../services/config.service';
+import { AuthService }    from "../services/auth.service";
+
+//Dashboard
+import { ScriptLoaderService } from "../services/script-loader.service";
+import { GlobalErrorHandler } from "../services/error-handler.service";
 
 import { NgSpinningPreloader } from 'ng2-spinning-preloader';
 
@@ -32,7 +36,9 @@ import { NgSpinningPreloader } from 'ng2-spinning-preloader';
     DataService,
     ConfigService,
     AuthService,
-    NgSpinningPreloader
+    NgSpinningPreloader,
+    ScriptLoaderService,
+    GlobalErrorHandler
   ],
   bootstrap: [
     AppComponent
