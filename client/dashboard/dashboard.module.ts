@@ -7,6 +7,7 @@ import { LayoutModule } from './layouts/layout.module';
 
 //COMPONENTS
 import { DashboardComponent }    from './dashboard.component';
+import { PagesComponent }    from './pages/pages.component';
 import { DashboardMainComponent } from './pages/dashboard-main/dashboard-main.component';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DashboardMainComponent } from './pages/dashboard-main/dashboard-main.co
   ],
   declarations: [
     DashboardComponent,
-    DashboardMainComponent
+    DashboardMainComponent,
+    PagesComponent
   ]
 })
 
