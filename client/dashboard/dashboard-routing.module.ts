@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
-import { DashboardHomeComponent } from './dashboard-home/dashboard-home.component';
+import { DashboardMainComponent } from './pages/dashboard-main/dashboard-main.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -12,7 +12,7 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: DashboardHomeComponent,
+        component: DashboardMainComponent,
       }
     ]
   }
