@@ -7,7 +7,7 @@ import { AuthService} from '../../../services/auth.service';
 @Component({
   selector: 'login',
   styleUrls: [ 'login.scss'],
-  templateUrl: 'login.pug',
+  templateUrl: 'login.html',
 })
 export class LoginComponent {
   private alerts = [];
