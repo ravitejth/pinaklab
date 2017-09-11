@@ -21,7 +21,7 @@ export class AppComponent  {
     // Loading Scripts dynamically
     this._script.load('body', 'js/vendors.bundle.js', 'js/scripts.bundle.js')
       .then(result => {
-        console.log(result);
+        // console.log('scripts loaded',result);
       });
 
     this.router.events.subscribe((event) => {

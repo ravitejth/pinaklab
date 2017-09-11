@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "QuickStart angular 2 with webpack, pug, scss.",
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --content-base ./dist --open --port 9000",
-    "dev": "webpack-dev-server --history-api-fallback --content-base ./dist --port 9000",
+    "start": "webpack-dev-server --hot --content-base ./dist --open --port 9000",
+    "dev": "webpack-dev-server --hot --content-base ./dist --port 9000",
     "clean": "rimraf dist",
     "build": "rimraf dist && cross-env NODE_ENV=production node_modules/.bin/webpack --config config/webpack.prod.js --progress --profile --colors"
   },
