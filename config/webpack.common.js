@@ -83,14 +83,6 @@ const config = {
       }
     }),
 
-    new webpack.ProvidePlugin({
-      Hammer: 'hammerjs/hammer',
-      'Popper': 'popper.js',
-      jQuery: 'jquery',
-      $: 'jquery',
-      jquery: 'jquery'
-    }),
-
     // Add vendor module to separate file
     new webpack.optimize.CommonsChunkPlugin(
       {

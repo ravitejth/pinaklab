@@ -4,23 +4,37 @@ import { Helpers } from '../../helpers';
 declare let mLayout: any;
 @Component({
     selector: "app-aside-nav",
-    templateUrl: "./aside-nav.component.html",
+    templateUrl: "aside-nav.pug",
     encapsulation: ViewEncapsulation.None,
 })
+
+/*
+interface Menu {
+  name: string,
+  url?: string,
+  items?: [MenuItem]
+}
+
+interface MenuItem {
+  name: string,
+  url: string
+}
+*/
+
 export class AsideNavComponent implements OnInit, AfterViewInit {
 
     menus = [
       {
-        "name": "Menu Item One",
-        "url": "/dashboard/menu1",
+        "name": "Components",
+        "url": "",
         "items": [
           {
-            "name": "Submenu Item One",
-            "url": "/dashboard/menu1/submenu1",
+            "name": "Forms",
+            "url": "/dashboard/forms",
           },
           {
-            "name": "Submenu Item Two",
-            "url": "/dashboard/menu1/submenu2",
+            "name": "Tables",
+            "url": "/dashboard/tables",
           }
         ]
       },

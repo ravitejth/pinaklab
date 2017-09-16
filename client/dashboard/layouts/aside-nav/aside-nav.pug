@@ -1,0 +1,31 @@
+#m_aside_left.m-grid__item.m-aside-left.m-aside-left--skin-dark(appunwraptag='')
+  #m_ver_menu.m-aside-menu.m-aside-menu--skin-dark.m-aside-menu--submenu-skin-dark(
+    data-menu-vertical='true',
+    data-menu-scrollable='false',
+    data-menu-dropdown-timeout='500')
+    ul.m-menu__nav.m-menu__nav--dropdown-submenu-arrow
+      li.m-menu__item(routerLinkActive='m-menu__item--active', [routerLinkActiveOptions]='{ exact: true }', aria-haspopup='true')
+        a.m-menu__link(routerLink='/dashboard')
+          i.m-menu__link-icon.flaticon-line-graph
+          span.m-menu__link-title
+            span.m-menu__link-wrap
+              span.m-menu__link-text Dashboard
+      li.m-menu__item.m-menu__item--submenu(
+        aria-haspopup='true',
+        data-menu-submenu-toggle='hover',
+        *ngFor='let menu of menus')
+        a.m-menu__link.m-menu__toggle
+          i.m-menu__link-icon.flaticon-settings
+          span.m-menu__link-text {{menu.name}}
+          i.m-menu__ver-arrow.la.la-angle-right
+        .m-menu__submenu
+          span.m-menu__arrow
+          ul.m-menu__subnav
+            li.m-menu__item(
+              routerLinkActive='m-menu__item--active',
+              [routerLinkActiveOptions]='{ exact: true }',
+              aria-haspopup='true',
+              *ngFor='let item of menu.items ')
+              a.m-menu__link(routerLink='{{item.url}}')
+                i.m-menu__link-bullet.m-menu__link-bullet--dot
+                span.m-menu__link-text {{item.name}}
