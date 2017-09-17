@@ -1,0 +1,402 @@
+// BEGIN: Subheader
+.m-subheader
+  .d-flex.align-items-center
+    .mr-auto
+      h3.m-subheader__title.m-subheader__title--separator Default Forms
+      ul.m-subheader__breadcrumbs.m-nav.m-nav--inline
+        li.m-nav__item.m-nav__item--home
+          a.m-nav__link.m-nav__link--icon(href='#')
+            i.m-nav__link-icon.la.la-home
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Forms
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Form Layouts
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Default Forms
+    div
+      .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(data-dropdown-toggle='hover', aria-expanded='true')
+        a.m-portlet__nav-link.btn.btn-lg.btn-secondary.m-btn.m-btn--outline-2x.m-btn--air.m-btn--icon.m-btn--icon-only.m-btn--pill.m-dropdown__toggle(href='#')
+          i.la.la-plus.m--hide
+          i.la.la-ellipsis-h
+        .m-dropdown__wrapper
+          span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+          .m-dropdown__inner
+            .m-dropdown__body
+              .m-dropdown__content
+                ul.m-nav
+                  li.m-nav__section.m-nav__section--first.m--hide
+                    span.m-nav__section-text Quick Actions
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-share
+                      span.m-nav__link-text Activity
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-chat-1
+                      span.m-nav__link-text Messages
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-info
+                      span.m-nav__link-text FAQ
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-lifebuoy
+                      span.m-nav__link-text Support
+                  li.m-nav__separator.m-nav__separator--fit
+                  li.m-nav__item
+                    a.btn.btn-outline-danger.m-btn.m-btn--pill.m-btn--wide.btn-sm(href='#') Submit
+// END: Subheader
+.m-content
+  .row
+    .col-lg-6
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Default Form Layout
+        // begin::Form
+        form.m-form
+          .m-portlet__body
+            .m-form__section.m-form__section--first
+              .form-group.m-form__group
+                label(for='example_input_full_name') Full Name:
+                input.form-control.m-input(type='email', placeholder='Enter full name')
+                span.m-form__help Please enter your full name
+              .form-group.m-form__group
+                label Email address:
+                input.form-control.m-input(type='email', placeholder='Enter email')
+                span.m-form__help We'll never share your email with anyone else
+              .form-group.m-form__group
+                label Subscription
+                .input-group
+                  span#basic-addon2.input-group-addon $
+                  input.form-control.m-input(type='text', placeholder='99.9')
+              .m-form__group.form-group
+                label(for='') Communication:
+                .m-checkbox-list
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Email
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | SMS
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Phone
+                    span
+          .m-portlet__foot.m-portlet__foot--fit
+            .m-form__actions.m-form__actions
+              button.btn.btn-primary(type='reset') Submit
+              button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Horizontal Form Layout
+        // begin::Form
+        form.m-form
+          .m-portlet__body
+            .m-form__section.m-form__section--first
+              .form-group.m-form__group.row
+                label.col-lg-3.col-form-label Full Name:
+                .col-lg-6
+                  input.form-control.m-input(type='email', placeholder='Enter full name')
+                  span.m-form__help Please enter your full name
+              .form-group.m-form__group.row
+                label.col-lg-3.col-form-label Email address:
+                .col-lg-6
+                  input.form-control.m-input(type='email', placeholder='Enter email')
+                  span.m-form__help We'll never share your email with anyone else
+              .form-group.m-form__group.row
+                label.col-lg-3.col-form-label Contact
+                .col-lg-6
+                  .input-group
+                    span.input-group-addon
+                      i.la.la-chain
+                    input.form-control.m-input(type='text', placeholder='Phone number')
+              .m-form__group.form-group.row
+                label.col-lg-3.col-form-label Communication:
+                .col-lg-6
+                  .m-checkbox-inline
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | Email
+                      span
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | SMS
+                      span
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | Phone
+                      span
+          .m-portlet__foot.m-portlet__foot--fit
+            .m-form__actions.m-form__actions
+              .row
+                .col-lg-3
+                .col-lg-6
+                  button.btn.btn-success(type='reset') Submit
+                  button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet
+    .col-lg-6
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Form Sections
+        // begin::Form
+        form.m-form.m-form--fit
+          .m-portlet__body
+            .m-form__section.m-form__section--first
+              .m-form__heading
+                h3.m-form__heading-title 1. Customer Info:
+              .form-group.m-form__group
+                label(for='example_input_full_name') Full Name:
+                input.form-control.m-input(type='email', placeholder='Enter full name')
+                span.m-form__help Please enter your full name
+              .form-group.m-form__group
+                label Email address:
+                input.form-control.m-input(type='email', placeholder='Enter email')
+                span.m-form__help We'll never share your email with anyone else
+              .form-group.m-form__group
+                label Contact:
+                .m-input-icon.m-input-icon--left
+                  input.form-control.m-input(type='text', placeholder='Phone number')
+                  span.m-input-icon__icon.m-input-icon__icon--left
+                    span
+                      i.la.la-bell
+                span.m-form__help We'll never share your email with anyone else
+              .m-form__group.form-group
+                label(for='') Communication:
+                .m-checkbox-list
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Email
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | SMS
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Phone
+                    span
+            .m-form__seperator.m-form__seperator--dashed
+            .m-form__section.m-form__section--last
+              .m-form__heading
+                h3.m-form__heading-title 2. Payment Info:
+              .m-form__group.form-group
+                label(for='') Payment Method:
+                .m-radio-list
+                  label.m-radio
+                    input(type='radio', name='payment_methid_1')
+                    | Credit Card
+                    span
+                  label.m-radio
+                    input(type='radio', name='payment_methid_1')
+                    | Bitcoin
+                    span
+                  label.m-radio
+                    input(type='radio', name='payment_methid_1')
+                    | Cash
+                    span
+                span.m-form__help Please select payment method
+              .form-group.m-form__group.m-form__group--last
+                label(for='example_input_full_name') Amount:
+                input.form-control.m-input(type='email', placeholder='Enter full name')
+                span.m-form__help Please enter payment amount
+          .m-portlet__foot.m-portlet__no-border.m-portlet__foot--fit
+            .m-form__actions.m-form__actions--solid
+              button.btn.btn-success(type='reset') Submit
+              button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet
+  .row
+    .col-lg-12
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Horizontal Form Sections
+        // begin::Form
+        form.m-form.m-form--label-align-right
+          .m-portlet__body
+            .m-form__section.m-form__section--first
+              .m-form__heading
+                h3.m-form__heading-title Customer Info:
+              .form-group.m-form__group.row
+                label.col-lg-2.col-form-label Full Name:
+                .col-lg-6
+                  input.form-control.m-input(type='email', placeholder='Enter full name')
+                  span.m-form__help Please enter your full name
+              .form-group.m-form__group.row
+                label.col-lg-2.col-form-label Email address:
+                .col-lg-6
+                  input.form-control.m-input(type='email', placeholder='Enter email')
+                  span.m-form__help We'll never share your email with anyone else
+              .m-form__group.form-group.row
+                label.col-lg-2.col-form-label Communication:
+                .col-lg-6
+                  .m-checkbox-list
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | Email
+                      span
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | SMS
+                      span
+                    label.m-checkbox
+                      input(type='checkbox')
+                      | Phone
+                      span
+            .m-form__seperator.m-form__seperator--dashed
+            .m-form__section.m-form__section--last
+              .m-form__heading
+                h3.m-form__heading-title Payment Info:
+              .m-form__group.form-group.row
+                label.col-lg-2.col-form-label Payment Method:
+                .col-lg-6
+                  .m-radio-list
+                    label.m-radio
+                      input(type='radio', name='payment_methid_1')
+                      | Credit Card
+                      span
+                    label.m-radio
+                      input(type='radio', name='payment_methid_1')
+                      | Bitcoin
+                      span
+                    label.m-radio
+                      input(type='radio', name='payment_methid_1')
+                      | Cash
+                      span
+                  span.m-form__help Please select payment method
+              .form-group.m-form__group.row
+                label.col-lg-2.col-form-label Amount:
+                .col-lg-6
+                  input.form-control.m-input(type='email', placeholder='Enter full name')
+                  span.m-form__help Please enter payment amount
+          .m-portlet__foot.m-portlet__foot--fit
+            .m-form__actions.m-form__actions
+              .row
+                .col-lg-2
+                .col-lg-6
+                  button.btn.btn-primary(type='reset') Submit
+                  button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Border Seperator Form Groups
+        // begin::Form
+        form.m-form.m-form--fit.m-form--label-align-right.m-form--group-seperator
+          .m-portlet__body
+            .form-group.m-form__group.row
+              label.col-lg-2.col-form-label Full Name:
+              .col-lg-6
+                input.form-control.m-input(type='email', placeholder='Enter full name')
+                span.m-form__help Please enter your full name
+            .form-group.m-form__group.row
+              label.col-lg-2.col-form-label Email address:
+              .col-lg-6
+                input.form-control.m-input(type='email', placeholder='Enter email')
+                span.m-form__help We'll never share your email with anyone else
+            .m-form__group.m-form__group--last.form-group.row
+              label.col-lg-2.col-form-label Communication:
+              .col-lg-6
+                .m-checkbox-list
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Email
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | SMS
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Phone
+                    span
+          .m-portlet__foot.m-portlet__no-border.m-portlet__foot--fit
+            .m-form__actions.m-form__actions--solid
+              .row
+                .col-lg-2
+                .col-lg-6
+                  button.btn.btn-success(type='reset') Submit
+                  button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Dashed Seperator Form Groups
+        // begin::Form
+        form.m-form.m-form--fit.m-form--label-align-right.m-form--group-seperator-dashed
+          .m-portlet__body
+            .form-group.m-form__group.row
+              label.col-lg-2.col-form-label Full Name:
+              .col-lg-6
+                input.form-control.m-input(type='email', placeholder='Enter full name')
+                span.m-form__help Please enter your full name
+            .form-group.m-form__group.row
+              label.col-lg-2.col-form-label Email address:
+              .col-lg-6
+                input.form-control.m-input(type='email', placeholder='Enter email')
+                span.m-form__help We'll never share your email with anyone else
+            .m-form__group.m-form__group--last.form-group.row
+              label.col-lg-2.col-form-label Communication:
+              .col-lg-6
+                .m-checkbox-list
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Email
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | SMS
+                    span
+                  label.m-checkbox
+                    input(type='checkbox')
+                    | Phone
+                    span
+          .m-portlet__foot.m-portlet__no-border.m-portlet__foot--fit
+            .m-form__actions.m-form__actions--solid
+              .row
+                .col-lg-2
+                .col-lg-6
+                  button.btn.btn-brand(type='reset') Submit
+                  button.btn.btn-secondary(type='reset') Cancel
+        // end::Form
+      // end::Portlet

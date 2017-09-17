@@ -1,20 +1,8 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Helpers } from '../../helpers';
-
+import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: "app-scroll-top",
-    templateUrl: "./scroll-top.component.html",
+    templateUrl: "scroll-top.pug",
     encapsulation: ViewEncapsulation.None,
 })
-export class ScrollTopComponent implements OnInit {
-
-
-    constructor() {
-
-    }
-    ngOnInit() {
-
-    }
-
-}
+export class ScrollTopComponent { }

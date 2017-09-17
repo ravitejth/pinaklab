@@ -2,8 +2,6 @@ import { Component }    from '@angular/core';
 
 @Component({
   selector: 'dashboard-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.pug'
 })
-export class HomeComponent {
-
-}
+export class HomeComponent { }

@@ -4,7 +4,6 @@ import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { AsideNavComponent } from './aside-nav/aside-nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
-import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HrefPreventDefaultDirective } from '../directives/href-prevent-default.directive';
@@ -18,7 +17,6 @@ import { PagesComponent }    from '../pages/pages.component';
         AsideNavComponent,
         FooterComponent,
         ScrollTopComponent,
-        TooltipsComponent,
         HrefPreventDefaultDirective,
         UnwrapTagDirective,
         PagesComponent
@@ -29,7 +27,6 @@ import { PagesComponent }    from '../pages/pages.component';
         AsideNavComponent,
         FooterComponent,
         ScrollTopComponent,
-        TooltipsComponent,
         HrefPreventDefaultDirective,
         PagesComponent
     ],
