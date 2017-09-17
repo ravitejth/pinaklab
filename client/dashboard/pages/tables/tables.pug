@@ -1,0 +1,234 @@
+// BEGIN: Subheader
+.m-subheader
+  .d-flex.align-items-center
+    .mr-auto
+      h3.m-subheader__title.m-subheader__title--separator Local Data
+      ul.m-subheader__breadcrumbs.m-nav.m-nav--inline
+        li.m-nav__item.m-nav__item--home
+          a.m-nav__link.m-nav__link--icon(href='#')
+            i.m-nav__link-icon.la.la-home
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='#')
+            span.m-nav__link-text Datatables
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='#')
+            span.m-nav__link-text Base
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Local Data
+    .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(data-dropdown-toggle='hover', aria-expanded='true')
+      a.m-portlet__nav-link.btn.btn-lg.btn-secondary.m-btn.m-btn--outline-2x.m-btn--air.m-btn--icon.m-btn--icon-only.m-btn--pill.m-dropdown__toggle(href='#')
+        i.la.la-plus.m--hide
+        i.la.la-ellipsis-h
+      .m-dropdown__wrapper
+        span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+        .m-dropdown__inner
+          .m-dropdown__body
+            .m-dropdown__content
+              ul.m-nav
+                li.m-nav__section.m-nav__section--first.m--hide
+                  span.m-nav__section-text Quick Actions
+                li.m-nav__item
+                  a.m-nav__link(href='')
+                    i.m-nav__link-icon.flaticon-share
+                    span.m-nav__link-text Activity
+                li.m-nav__item
+                  a.m-nav__link(href='')
+                    i.m-nav__link-icon.flaticon-chat-1
+                    span.m-nav__link-text Messages
+                li.m-nav__item
+                  a.m-nav__link(href='')
+                    i.m-nav__link-icon.flaticon-info
+                    span.m-nav__link-text FAQ
+                li.m-nav__item
+                  a.m-nav__link(href='')
+                    i.m-nav__link-icon.flaticon-lifebuoy
+                    span.m-nav__link-text Support
+                li.m-nav__separator.m-nav__separator--fit
+                li.m-nav__item
+                  a.btn.btn-outline-danger.m-btn.m-btn--pill.m-btn--wide.btn-sm(href='#') Submit
+// END: Subheader
+.m-content
+  .m-portlet.m-portlet--mobile
+    .m-portlet__head
+      .m-portlet__head-caption
+        .m-portlet__head-title
+          h3.m-portlet__head-text Local Datatable
+            small initialized from json object
+      .m-portlet__head-tools
+        ul.m-portlet__nav
+          li.m-portlet__nav-item
+            .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(data-dropdown-toggle='hover', aria-expanded='true')
+              a.m-portlet__nav-link.m-portlet__nav-link--icon.m-portlet__nav-link--icon-xl.m-dropdown__toggle(href='#')
+                i.la.la-plus.m--hide
+                i.la.la-ellipsis-h.m--font-brand
+              .m-dropdown__wrapper
+                span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+                .m-dropdown__inner
+                  .m-dropdown__body
+                    .m-dropdown__content
+                      ul.m-nav
+                        li.m-nav__section.m-nav__section--first
+                          span.m-nav__section-text Quick Actions
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-share
+                            span.m-nav__link-text Create Post
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-chat-1
+                            span.m-nav__link-text Send Messages
+                        li.m-nav__item
+                          a.m-nav__link(href='')
+                            i.m-nav__link-icon.flaticon-multimedia-2
+                            span.m-nav__link-text Upload File
+    .m-portlet__body
+      // begin: Search Form
+      .m-form.m-form--label-align-right.m--margin-top-20.m--margin-bottom-30
+        .row.align-items-center
+          .col-xl-8.order-2.order-xl-1
+            .form-group.m-form__group.row.align-items-center
+              .col-md-4
+                .m-form__group.m-form__group--inline
+                  .m-form__label
+                    label Status:
+                  .m-form__control
+                    select#m_form_status.form-control.m-bootstrap-select.m-bootstrap-select--solid
+                      option(value='') All
+                      option(value='1') Pending
+                      option(value='2') Delivered
+                      option(value='3') Canceled
+                .d-md-none.m--margin-bottom-10
+              .col-md-4
+                .m-form__group.m-form__group--inline
+                  .m-form__label
+                    label.m-label.m-label--single
+                      | Type:
+                  .m-form__control
+                    select#m_form_type.form-control.m-bootstrap-select.m-bootstrap-select--solid
+                      option(value='') All
+                      option(value='1') Online
+                      option(value='2') Retail
+                      option(value='3') Direct
+                .d-md-none.m--margin-bottom-10
+              .col-md-4
+                .m-input-icon.m-input-icon--left
+                  input#m_form_search.form-control.m-input.m-input--solid(type='text', placeholder='Search...')
+                  span.m-input-icon__icon.m-input-icon__icon--left
+                    span
+                      i.la.la-search
+          .col-xl-4.order-1.order-xl-2.m--align-right
+            a.btn.btn-accent.m-btn.m-btn--custom.m-btn--icon.m-btn--air.m-btn--pill(href='#')
+              span
+                i.la.la-cart-plus
+                span New Order
+            .m-separator.m-separator--dashed.d-xl-none
+      // end: Search Form
+      // begin: Datatable
+      #local_data.m_datatable.m-datatable.m-datatable--default.m-datatable--loaded
+        table#m-datatable--730310919609.m-datatable__table(style='display: block; height: auto; overflow-x: auto;')
+          thead.m-datatable__head
+            tr.m-datatable__row(style='height: 53px;')
+              th.m-datatable__cell--center.m-datatable__cell.m-datatable__cell--sort(data-field='RecordID')
+                span(style='width: 50px;') ID
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='CompanyName')
+                span(style='width: 110px;') Name
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='ShipName')
+                span(style='width: 110px;') Owner
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='Currency')
+                span(style='width: 100px;') Mobile
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='ShipAddress')
+                span(style='width: 110px;') Email
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='Status')
+                span(style='width: 110px;') Status
+              th.m-datatable__cell.m-datatable__cell--sort(data-field='Actions')
+                span(style='width: 110px;') Actions
+          tbody.m-datatable__body
+            tr.m-datatable__row.m-datatable__row--even(data-row='0', style='height: 55px;', *ngFor="let fleetowner of data")
+              td.m-datatable__cell--center.m-datatable__cell(data-field='RecordID')
+                span(style='width: 50px;') {{fleetowner.id}}
+              td.m-datatable__cell(data-field='Company name')
+                span(style='width: 110px;') {{fleetowner.name}}
+              td.m-datatable__cell(data-field='Fleet Owner')
+                span(style='width: 110px;') {{fleetowner.firstName}} {{fleetowner.lastName}}
+              td.m-datatable__cell(data-field='Vehicle No')
+                span(style='width: 100px;') {{fleetowner.mobile}}
+              td.m-datatable__cell(data-field='Engine No')
+                span(style='width: 100px;') {{fleetowner.email}}
+              td.m-datatable__cell(data-field='Status')
+                span(style='width: 110px;')
+                  span.m-badge.m-badge--brand.m-badge--wide Pending
+              td.m-datatable__cell(data-field='Actions')
+                span(style='overflow: visible; width: 110px;')
+                  .dropdown
+                    a.btn.m-btn.m-btn--hover-accent.m-btn--icon.m-btn--icon-only.m-btn--pill(href='#', data-toggle='dropdown')
+                      i.la.la-ellipsis-h
+                    .dropdown-menu.dropdown-menu-right
+                      a.dropdown-item(href='#')
+                        i.la.la-edit Edit Details
+                      a.dropdown-item(href='#')
+                        i.la.la-leaf Update Status
+                      a.dropdown-item(href='#')
+                        i.la.la-print Generate Report
+                  a.m-portlet__nav-link.btn.m-btn.m-btn--hover-accent.m-btn--icon.m-btn--icon-only.m-btn--pill(href='#', title='View ')
+                    i.la.la-edit
+
+        // Table Paginator starts
+        .m-datatable__pager.m-datatable--paging-loaded.clearfix
+          ul.m-datatable__pager-nav
+            li
+              a.m-datatable__pager-link.m-datatable__pager-link--first.m-datatable__pager-link--disabled(title='First', data-page='1', disabled='disabled')
+                i.la.la-angle-double-left
+            li
+              a.m-datatable__pager-link.m-datatable__pager-link--prev.m-datatable__pager-link--disabled(title='Previous', data-page='1', disabled='disabled')
+                i.la.la-angle-left
+            li(style='display: none;')
+              a.m-datatable__pager-link.m-datatable__pager-link--more-prev(title='More pages', data-page='1')
+                i.la.la-ellipsis-h
+            li(style='display: none;')
+              input.m-pager-input.form-control(type='text', title='Page number')
+            li(style='')
+              a.m-datatable__pager-link.m-datatable__pager-link-number.m-datatable__pager-link--active(data-page='1') 1
+            li(style='display: none;')
+              a.m-datatable__pager-link.m-datatable__pager-link--more-next(title='More pages', data-page='1')
+                i.la.la-ellipsis-h
+            li
+              a.m-datatable__pager-link.m-datatable__pager-link--next.m-datatable__pager-link--disabled(title='Next', data-page='1', disabled='disabled')
+                i.la.la-angle-right
+            li
+              a.m-datatable__pager-link.m-datatable__pager-link--last.m-datatable__pager-link--disabled(title='Last', data-page='1', disabled='disabled')
+                i.la.la-angle-double-right
+          .m-datatable__pager-info
+            .btn-group.bootstrap-select.m-datatable__pager-size(style='width: 70px;')
+              button.btn.dropdown-toggle.btn-default(type='button', data-toggle='dropdown', role='button', title='Select page size')
+                span.filter-option.pull-left 10
+                span.bs-caret
+                  span.caret
+              .dropdown-menu.open(role='combobox')
+                ul.dropdown-menu.inner(role='listbox', aria-expanded='false')
+                  li.selected(data-original-index='1')
+                    a(tabindex='0', data-tokens='null', role='option', aria-disabled='false', aria-selected='true')
+                      span.text 10
+                      span.glyphicon.glyphicon-ok.check-mark
+                  li(data-original-index='2')
+                    a(tabindex='0', data-tokens='null', role='option', aria-disabled='false', aria-selected='false')
+                      span.text 20
+                      span.glyphicon.glyphicon-ok.check-mark
+                  li(data-original-index='3')
+                    a(tabindex='0', data-tokens='null', role='option', aria-disabled='false', aria-selected='false')
+                      span.text 30
+                      span.glyphicon.glyphicon-ok.check-mark
+                  li(data-original-index='4')
+                    a(tabindex='0', data-tokens='null', role='option', aria-disabled='false', aria-selected='false')
+                      span.text 50
+                      span.glyphicon.glyphicon-ok.check-mark
+                  li(data-original-index='5')
+                    a(tabindex='0', data-tokens='null', role='option', aria-disabled='false', aria-selected='false')
+                      span.text 100
+                      span.glyphicon.glyphicon-ok.check-mark
+            span.m-datatable__pager-detail Displaying 1 - 5 of 5 records
+            // Table Paginator Ends
+      // end: Datatable
