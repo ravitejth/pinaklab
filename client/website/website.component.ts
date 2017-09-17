@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'website',
   styleUrls: [ 'website.scss'],
-  template: '<router-outlet></router-outlet>',
+  templateUrl: 'website.pug',
 })
 
 export class WebsiteComponent {

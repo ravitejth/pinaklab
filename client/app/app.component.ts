@@ -6,7 +6,7 @@ import { ScriptLoaderService } from '../services/script-loader.service';
 @Component({
   selector: 'app',
   styleUrls: [ 'app.scss'],
-  templateUrl: 'app.pug',
+  template: '<router-outlet></router-outlet>',
   encapsulation: ViewEncapsulation.None
 })
 

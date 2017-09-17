@@ -1,7 +1,8 @@
-@import "index";
 
+//== Font-awesome
 $fa-font-path: "~font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
 
+//== Loading
 @import "loading";
 

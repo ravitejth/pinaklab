@@ -1,0 +1,15 @@
+@import "../../../stylesheets/dashboard/index";
+@import "../../../stylesheets/dashboard/mixins/login";
+
+//== Build Component Base
+@include m-build-snippet--login-2-base();
+
+
+//== Build Component Base
+@include m-build-snippet--login-2-skin-1();
+
+//== Build Component Base
+@include m-build-snippet--login-2-skin-2();
+
+//== Build Component Base
+@include m-build-snippet--login-2-skin-3();

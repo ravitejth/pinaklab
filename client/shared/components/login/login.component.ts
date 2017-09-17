@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { DataService} from "../../../services/data.service";
+import { DataService } from "../../../services/data.service";
 import { ConfigService } from '../../../services/config.service';
-import { AuthService} from '../../../services/auth.service';
+import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'login',
   styleUrls: [ 'login.scss'],
   templateUrl: 'login.html',
 })
+
 export class LoginComponent {
   private alerts = [];
   user = {};

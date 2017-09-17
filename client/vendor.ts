@@ -7,7 +7,7 @@ import '@angular/http';
 import '@angular/router';
 // RxJS
 import 'rxjs';
-import 'jQuery';
+import 'jquery';
 import 'html5shiv';
 
 // import 'respond.js/dest/respond.min.js';
