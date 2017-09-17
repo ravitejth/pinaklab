@@ -23,7 +23,7 @@ export const routes: Routes = [
       },
       {
         path: 'schema-form',
-        loadChildren: './pages/schema-form/schema-form.module#SchemaFormModule'
+        loadChildren: './pages/custom-form/custom-form.module#CustomFormModule'
       }
     ]
   }

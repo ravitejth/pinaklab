@@ -4,7 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LayoutModule } from '../../layouts/layout.module';
 import { PagesComponent } from '../pages.component';
-import { SchemaFormComponent } from './schema-form.component';
+import { CustomFormComponent } from './custom-form.component';
+
+import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from "angular2-schema-form";
 
 const routes: Routes = [
   {
@@ -13,21 +15,24 @@ const routes: Routes = [
     "children": [
       {
         "path": "",
-        "component": SchemaFormComponent
+        "component": CustomFormComponent
       }
     ]
   }
 ];
 @NgModule({
   imports: [
-    CommonModule, RouterModule.forChild(routes), LayoutModule
+    CommonModule,
+    RouterModule.forChild(routes),
+    SchemaFormModule,
+    LayoutModule
   ],
   declarations: [
-    SchemaFormComponent
+    CustomFormComponent
   ],
   exports: [
     RouterModule
-  ]
+  ], providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}]
 })
 
-export class SchemaFormModule {}
+export class CustomFormModule {}
