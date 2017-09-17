@@ -24,6 +24,10 @@ export const routes: Routes = [
       {
         path: 'schema-form',
         loadChildren: './pages/custom-form/custom-form.module#CustomFormModule'
+      },
+      {
+        path: 'profile',
+        loadChildren: './pages/profile/profile.module#ProfileModule'
       }
     ]
   }

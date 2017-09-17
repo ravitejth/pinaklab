@@ -47,6 +47,16 @@ export class AsideNavComponent implements OnInit, AfterViewInit {
             "url": "/dashboard/schema-form",
           }
         ]
+      },
+      {
+        "name": "User",
+        "url": "#",
+        "items": [
+          {
+            "name": "Profile",
+            "url": "/dashboard/profile",
+          }
+        ]
       }
     ];
 
