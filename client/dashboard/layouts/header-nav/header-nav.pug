@@ -110,243 +110,12 @@ header.m-grid__item.m-header(data-minimize-mobile='hide', data-minimize-offset='
                     a.m-menu__link(routerLink='/header/actions')
                       i.m-menu__link-icon.flaticon-users
                       span.m-menu__link-text Register Member
-            li.m-menu__item.m-menu__item--submenu.m-menu__item--rel(data-menu-submenu-toggle='click', aria-haspopup='true')
-              a.m-menu__link.m-menu__toggle(href='#')
-                i.m-menu__link-icon.flaticon-line-graph
-                span.m-menu__link-text Reports
-                i.m-menu__hor-arrow.la.la-angle-down
-                i.m-menu__ver-arrow.la.la-angle-right
-              .m-menu__submenu.m-menu__submenu--fixed.m-menu__submenu--left(style='width:1000px')
-                span.m-menu__arrow.m-menu__arrow--adjust
-                .m-menu__subnav
-                  ul.m-menu__content
-                    li.m-menu__item(routerLinkActive='m-menu__item--active', [routerLinkActiveOptions]='{ exact: true }')
-                      h3.m-menu__heading.m-menu__toggle
-                        span.m-menu__link-text Finance Reports
-                        i.m-menu__ver-arrow.la.la-angle-right
-                      ul.m-menu__inner
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-map
-                            span.m-menu__link-text Annual Reports
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-user
-                            span.m-menu__link-text HR Reports
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-clipboard
-                            span.m-menu__link-text IPO Reports
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-graphic-1
-                            span.m-menu__link-text Finance Margins
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-graphic-2
-                            span.m-menu__link-text Revenue Reports
-                    li.m-menu__item(routerLinkActive='m-menu__item--active', [routerLinkActiveOptions]='{ exact: true }')
-                      h3.m-menu__heading.m-menu__toggle
-                        span.m-menu__link-text Project Reports
-                        i.m-menu__ver-arrow.la.la-angle-right
-                      ul.m-menu__inner
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Coca Cola CRM
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Delta Airlines Booking Site
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Malibu Accounting
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Vineseed Website Rewamp
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Zircon Mobile App
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--line
-                              span
-                            span.m-menu__link-text Mercury CMS
-                    li.m-menu__item(routerLinkActive='m-menu__item--active', [routerLinkActiveOptions]='{ exact: true }')
-                      h3.m-menu__heading.m-menu__toggle
-                        span.m-menu__link-text HR Reports
-                        i.m-menu__ver-arrow.la.la-angle-right
-                      ul.m-menu__inner
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Staff Directory
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Client Directory
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Salary Reports
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Staff Payslips
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Corporate Expenses
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-bullet.m-menu__link-bullet--dot
-                              span
-                            span.m-menu__link-text Project Expenses
-                    li.m-menu__item(routerLinkActive='m-menu__item--active', [routerLinkActiveOptions]='{ exact: true }')
-                      h3.m-menu__heading.m-menu__toggle
-                        span.m-menu__link-text Reporting Apps
-                        i.m-menu__ver-arrow.la.la-angle-right
-                      ul.m-menu__inner
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Report Adjusments
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Sources & Mediums
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Reporting Settings
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Conversions
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Report Flows
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            span.m-menu__link-text Audit & Logs
-            li.m-menu__item.m-menu__item--submenu.m-menu__item--rel(data-menu-submenu-toggle='click', aria-haspopup='true')
-              a.m-menu__link.m-menu__toggle(href='#')
-                i.m-menu__link-icon.flaticon-paper-plane
-                span.m-menu__link-title
-                  span.m-menu__link-wrap
-                    span.m-menu__link-text Apps
-                    span.m-menu__link-badge
-                      span.m-badge.m-badge--brand.m-badge--wide new
-                i.m-menu__hor-arrow.la.la-angle-down
-                i.m-menu__ver-arrow.la.la-angle-right
-              .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
-                span.m-menu__arrow.m-menu__arrow--adjust
-                ul.m-menu__subnav
-                  li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                    a.m-menu__link(routerLink='/header/actions')
-                      i.m-menu__link-icon.flaticon-business
-                      span.m-menu__link-text eCommerce
-                  li.m-menu__item.m-menu__item--submenu(data-menu-submenu-toggle='hover', aria-haspopup='true')
-                    a.m-menu__link.m-menu__toggle(routerLink='/crud/datatable_v1')
-                      i.m-menu__link-icon.flaticon-computer
-                      span.m-menu__link-text Audience
-                      i.m-menu__hor-arrow.la.la-angle-right
-                      i.m-menu__ver-arrow.la.la-angle-right
-                    .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--right
-                      span.m-menu__arrow
-                      ul.m-menu__subnav
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-users
-                            span.m-menu__link-text Active Users
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-interface-1
-                            span.m-menu__link-text User Explorer
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-lifebuoy
-                            span.m-menu__link-text Users Flows
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-graphic-1
-                            span.m-menu__link-text Market Segments
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-graphic
-                            span.m-menu__link-text User Reports
-                  li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                    a.m-menu__link(routerLink='/header/actions')
-                      i.m-menu__link-icon.flaticon-map
-                      span.m-menu__link-text
-                        | Marketing
-                  li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                    a.m-menu__link(routerLink='/header/actions')
-                      i.m-menu__link-icon.flaticon-graphic-2
-                      span.m-menu__link-title
-                        span.m-menu__link-wrap
-                          span.m-menu__link-text Campaigns
-                          span.m-menu__link-badge
-                            span.m-badge.m-badge--success 3
-                  li.m-menu__item.m-menu__item--submenu(data-menu-submenu-toggle='hover', aria-haspopup='true')
-                    a.m-menu__link.m-menu__toggle(href='#')
-                      i.m-menu__link-icon.flaticon-infinity Cloud Manager
-                      i.m-menu__hor-arrow.la.la-angle-right
-                      i.m-menu__ver-arrow.la.la-angle-right
-                    .m-menu__submenu.m-menu__submenu--classic.m-menu__submenu--left
-                      span.m-menu__arrow
-                      ul.m-menu__subnav
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-add
-                            span.m-menu__link-title
-                              span.m-menu__link-wrap
-                                span.m-menu__link-text File Upload
-                                span.m-menu__link-badge
-                                  span.m-badge.m-badge--danger 3
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-signs-1
-                            span.m-menu__link-text File Attributes
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-folder
-                            span.m-menu__link-text Folders
-                        li.m-menu__item(data-redirect='true', aria-haspopup='true')
-                          a.m-menu__link(routerLink='/header/actions')
-                            i.m-menu__link-icon.flaticon-cogwheel-2
-                            span.m-menu__link-text System Settings
         // END: Horizontal Menu
         // BEGIN: Topbar
         #m_header_topbar.m-topbar.m-stack.m-stack--ver.m-stack--general
           .m-stack__item.m-topbar__nav-wrapper
             ul.m-topbar__nav.m-nav.m-nav--inline
-              li#m_quicksearch.m-nav__item.m-dropdown.m-dropdown--large.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width.m-dropdown--skin-light.m-list-search.m-list-search--skin-light(data-dropdown-toggle='click', data-dropdown-persistent='true', data-search-type='dropdown')
-                a.m-nav__link.m-dropdown__toggle(href='#')
-                  span.m-nav__link-icon
-                    i.flaticon-search-1
-                .m-dropdown__wrapper
-                  span.m-dropdown__arrow.m-dropdown__arrow--center
-                  .m-dropdown__inner
-                    .m-dropdown__header
-                      form.m-list-search__form
-                        .m-list-search__form-wrapper
-                          span.m-list-search__form-input-wrapper
-                            input#m_quicksearch_input.m-list-search__form-input(autocomplete='off', type='text', name='q', value='', placeholder='Search...')
-                          span#m_quicksearch_close.m-list-search__form-icon-close
-                            i.la.la-remove
-                    .m-dropdown__body
-                      .m-dropdown__scrollable.m-scrollable(data-scrollable='true', data-max-height='300', data-mobile-max-height='200')
-                        .m-dropdown__content
+              // BEGIN: Notifications
               li.m-nav__item.m-topbar__notifications.m-topbar__notifications--img.m-dropdown.m-dropdown--large.m-dropdown--header-bg-fill.m-dropdown--arrow.m-dropdown--align-center.m-dropdown--mobile-full-width(data-dropdown-toggle='click', data-dropdown-persistent='true')
                 a#m_topbar_notification_icon.m-nav__link.m-dropdown__toggle(href='#')
                   span.m-nav__link-badge.m-badge.m-badge--dot.m-badge--dot-small.m-badge--danger
@@ -441,6 +210,8 @@ header.m-grid__item.m-header(data-minimize-mobile='hide', data-minimize-offset='
                                 span All caught up!
                                   br
                                   | No new logs.
+              // END: Notifications
+              //BEGIN: Profile
               li.m-nav__item.m-topbar__user-profile.m-topbar__user-profile--img.m-dropdown.m-dropdown--medium.m-dropdown--arrow.m-dropdown--header-bg-fill.m-dropdown--align-right.m-dropdown--mobile-full-width.m-dropdown--skin-light(data-dropdown-toggle='click')
                 a.m-nav__link.m-dropdown__toggle(href='#')
                   span.m-topbar__userpic
@@ -460,8 +231,7 @@ header.m-grid__item.m-header(data-minimize-mobile='hide', data-minimize-offset='
                       .m-dropdown__content
                         ul.m-nav.m-nav--skin-light
                           li.m-nav__section.m--hide
-                            span.m-nav__section-text
-                              | Section
+                            span.m-nav__section-text Section
                           li.m-nav__item
                             a.m-nav__link(routerLink='/dashboard/profile')
                               i.m-nav__link-icon.flaticon-profile-1
@@ -492,5 +262,6 @@ header.m-grid__item.m-header(data-minimize-mobile='hide', data-minimize-offset='
                           li.m-nav__separator.m-nav__separator--fit
                           li.m-nav__item
                             a.btn.m-btn--pill.btn-secondary.m-btn.m-btn--custom.m-btn--label-brand.m-btn--bolder(routerLink='/login') Logout
+              // END: Profile
         // END: Topbar
 // END: Header
