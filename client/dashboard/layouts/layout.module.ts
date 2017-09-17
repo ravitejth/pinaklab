@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HrefPreventDefaultDirective } from '../directives/href-prevent-default.directive';
 import { UnwrapTagDirective } from '../directives/unwrap-tag.directive';
+import { PagesComponent }    from '../pages/pages.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { UnwrapTagDirective } from '../directives/unwrap-tag.directive';
         TooltipsComponent,
         HrefPreventDefaultDirective,
         UnwrapTagDirective,
+        PagesComponent
     ],
     exports: [
         LayoutComponent,
@@ -29,6 +31,7 @@ import { UnwrapTagDirective } from '../directives/unwrap-tag.directive';
         ScrollTopComponent,
         TooltipsComponent,
         HrefPreventDefaultDirective,
+        PagesComponent
     ],
     imports: [
         CommonModule,

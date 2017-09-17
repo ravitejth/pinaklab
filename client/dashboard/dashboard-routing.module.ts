@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FormsComponent } from './pages/forms/forms.component';
 
 // Route Configuration
 export const routes: Routes = [
@@ -13,11 +11,11 @@ export const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent,
+        loadChildren: './pages/home/home.module#DashboardHomeModule'
       },
       {
         path: 'forms',
-        component: FormsComponent,
+        loadChildren: './pages/forms/forms.module#FormsModule'
       }
     ]
   }

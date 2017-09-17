@@ -7,9 +7,6 @@ import { LayoutModule } from './layouts/layout.module';
 
 //COMPONENTS
 import { DashboardComponent }    from './dashboard.component';
-import { PagesComponent }    from './pages/pages.component';
-import { HomeComponent } from './pages/home/home.component';
-import { FormsComponent } from './pages/forms/forms.component';
 
 @NgModule({
   imports: [
@@ -19,9 +16,6 @@ import { FormsComponent } from './pages/forms/forms.component';
   ],
   declarations: [
     DashboardComponent,
-    HomeComponent,
-    PagesComponent,
-    FormsComponent
   ]
 })
 
