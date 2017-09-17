@@ -11,8 +11,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent }   from './contact/contact.component';
 
 // Shared
-import { HeaderComponent } from '../shared/components/header/header.component';
-import { FooterComponent } from '../shared/components/footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 

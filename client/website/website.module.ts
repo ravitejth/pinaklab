@@ -2,6 +2,8 @@ import { NgModule }      from '@angular/core';
 
 //COMPONENTS
 import { WebsiteComponent }     from './website.component';
+import { HeaderComponent }      from './header/header.component'
+import { FooterComponent }      from './footer/footer.component';
 import { HomeHeaderComponent }  from './home/home-header/home-header.component';
 import { HomeComponent }        from './home/home.component';
 import { AboutComponent }       from './about/about.component';
@@ -24,6 +26,8 @@ import { SharedModule } from '../shared/shared.module';
     declarations: [
       WebsiteComponent,
       AboutComponent,
+      HeaderComponent,
+      FooterComponent,
       HomeHeaderComponent,
       HomeComponent,
       ServicesComponent,
