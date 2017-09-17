@@ -1,8 +1,16 @@
+// Modules
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WebsiteComponent } from './website.component';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+
+// Components
+import { WebsiteComponent }   from './website.component';
+import { HomeComponent }      from './home/home.component';
+import { AboutComponent }     from './about/about.component';
+import { ServicesComponent }  from './services/services.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent }   from './contact/contact.component';
+
+// Shared
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { FooterComponent } from '../shared/components/footer/footer.component';
 
@@ -39,6 +47,54 @@ export const routes: Routes = [{
           component: FooterComponent,
           outlet: 'Footer',
         }]
+      },
+      {
+        path: 'services',
+        children: [
+          {
+            path: '',
+            component: HeaderComponent,
+            outlet: 'Header',
+          }, {
+            path: '',
+            component: ServicesComponent
+          }, {
+            path: '',
+            component: FooterComponent,
+            outlet: 'Footer',
+          }]
+      },
+      {
+        path: 'portfolio',
+        children: [
+          {
+            path: '',
+            component: HeaderComponent,
+            outlet: 'Header',
+          }, {
+            path: '',
+            component: PortfolioComponent
+          }, {
+            path: '',
+            component: FooterComponent,
+            outlet: 'Footer',
+          }]
+      },
+      {
+        path: 'contact',
+        children: [
+          {
+            path: '',
+            component: HeaderComponent,
+            outlet: 'Header',
+          }, {
+            path: '',
+            component: ContactComponent
+          }, {
+            path: '',
+            component: FooterComponent,
+            outlet: 'Footer',
+          }]
       }
     ]
   }
