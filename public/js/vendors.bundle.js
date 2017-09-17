@@ -17140,7 +17140,7 @@ return t.apply(e,arguments)}}function a(){this.onload=null,e(t).addClass(d[2]),r
 
 
 /* **********************************************
-     Begin prism-core.js
+     Begin prism-website.js
 ********************************************** */
 
 var _self = (typeof window !== 'undefined')
@@ -29330,7 +29330,7 @@ S2.define('jquery.select2',[
   'jquery',
   'jquery-mousewheel',
 
-  './select2/core',
+  './select2/website',
   './select2/defaults'
 ], function ($, _, Select2, Defaults) {
   if ($.fn.select2 == null) {
@@ -58462,7 +58462,7 @@ $.notifyDefaults({
 	}
 
 	/**
-	 * ### jsTree core functionality
+	 * ### jsTree website functionality
 	 */
 
 	// internal variables
@@ -58539,7 +58539,7 @@ $.notifyDefaults({
 	/**
 	 * the jstree class constructor, used only internally
 	 * @private
-	 * @name $.jstree.core(id)
+	 * @name $.jstree.website(id)
 	 * @param {Number} id this instance's index
 	 */
 	$.jstree.core = function (id) {
@@ -58682,7 +58682,7 @@ $.notifyDefaults({
 	});
 
 	/**
-	 * stores all defaults for the core
+	 * stores all defaults for the website
 	 * @name $.jstree.defaults.core
 	 */
 	$.jstree.defaults.core = {
@@ -58702,7 +58702,7 @@ $.notifyDefaults({
 		 *
 		 *	// AJAX
 		 *	$('#tree').jstree({
-		 *		'core' : {
+		 *		'website' : {
 		 *			'data' : {
 		 *				'url' : '/get/children/',
 		 *				'data' : function (node) {
@@ -58713,7 +58713,7 @@ $.notifyDefaults({
 		 *
 		 *	// direct data
 		 *	$('#tree').jstree({
-		 *		'core' : {
+		 *		'website' : {
 		 *			'data' : [
 		 *				'Simple root node',
 		 *				{
@@ -58728,7 +58728,7 @@ $.notifyDefaults({
 		 *
 		 *	// function
 		 *	$('#tree').jstree({
-		 *		'core' : {
+		 *		'website' : {
 		 *			'data' : function (obj, callback) {
 		 *				callback.call(this, ['Root 1', 'Root 2']);
 		 *			}
@@ -58747,7 +58747,7 @@ $.notifyDefaults({
 		 * __Examples__
 		 *
 		 *	$('#tree').jstree({
-		 *		'core' : {
+		 *		'website' : {
 		 *			'strings' : {
 		 *				'Loading ...' : 'Please wait ...'
 		 *			}
@@ -58765,7 +58765,7 @@ $.notifyDefaults({
 		 * __Examples__
 		 *
 		 *	$('#tree').jstree({
-		 *		'core' : {
+		 *		'website' : {
 		 *			'check_callback' : function (operation, node, node_parent, node_position, more) {
 		 *				// operation can be 'create_node', 'rename_node', 'delete_node', 'move_node', 'copy_node' or 'edit'
 		 *				// in case of 'rename_node' node_position is filled with the new node name
@@ -59618,7 +59618,7 @@ $.notifyDefaults({
 			return !this.is_parent(obj);
 		},
 		/**
-		 * loads a node (fetches its children using the `core.data` setting). Multiple nodes can be passed to by using an array.
+		 * loads a node (fetches its children using the `website.data` setting). Multiple nodes can be passed to by using an array.
 		 * @name load_node(obj [, callback])
 		 * @param  {mixed} obj
 		 * @param  {function} callback a function to be executed once loading is complete, the function is executed in the instance's scope and receives two arguments - the node and a boolean status
@@ -59795,7 +59795,7 @@ $.notifyDefaults({
 				else {
 					return callback.call(this, false);
 				}
-				// return callback.call(this, obj.id === $.jstree.root ? this._append_html_data(obj, this._data.core.original_container_html.clone(true)) : false);
+				// return callback.call(this, obj.id === $.jstree.root ? this._append_html_data(obj, this._data.website.original_container_html.clone(true)) : false);
 			}
 			if($.isFunction(s)) {
 				return s.call(this, obj, $.proxy(function (d) {
@@ -60972,7 +60972,7 @@ $.notifyDefaults({
 		 * @name open_node(obj [, callback, animation])
 		 * @param {mixed} obj the node to open
 		 * @param {Function} callback a function to execute once the node is opened
-		 * @param {Number} animation the animation duration in milliseconds when opening the node (overrides the `core.animation` setting). Use `false` for no animation.
+		 * @param {Number} animation the animation duration in milliseconds when opening the node (overrides the `website.animation` setting). Use `false` for no animation.
 		 * @trigger open_node.jstree, after_open.jstree, before_open.jstree
 		 */
 		open_node : function (obj, callback, animation) {
@@ -61090,7 +61090,7 @@ $.notifyDefaults({
 		 * closes a node, hiding its children
 		 * @name close_node(obj [, animation])
 		 * @param {mixed} obj the node to close
-		 * @param {Number} animation the animation duration in milliseconds when closing the node (overrides the `core.animation` setting). Use `false` for no animation.
+		 * @param {Number} animation the animation duration in milliseconds when closing the node (overrides the `website.animation` setting). Use `false` for no animation.
 		 * @trigger close_node.jstree, after_close.jstree
 		 */
 		close_node : function (obj, animation) {
@@ -61796,8 +61796,8 @@ $.notifyDefaults({
 					/*!
 					'themes' : {
 						'name' : this.get_theme(),
-						'icons' : this._data.core.themes.icons,
-						'dots' : this._data.core.themes.dots
+						'icons' : this._data.website.themes.icons,
+						'dots' : this._data.website.themes.dots
 					},
 					*/
 					'selected' : []
@@ -62375,7 +62375,7 @@ $.notifyDefaults({
 				return tmp.functions[chk];
 			}
 			if(chc === false || ($.isFunction(chc) && chc.call(this, chk, obj, par, pos, more) === false) || (chc && chc[chk] === false)) {
-				this._data.core.last_error = { 'error' : 'check', 'plugin' : 'core', 'id' : 'core_03', 'reason' : 'User config for core.check_callback prevents function: ' + chk, 'data' : JSON.stringify({ 'chk' : chk, 'pos' : pos, 'obj' : obj && obj.id ? obj.id : false, 'par' : par && par.id ? par.id : false }) };
+				this._data.core.last_error = { 'error' : 'check', 'plugin' : 'core', 'id' : 'core_03', 'reason' : 'User config for website.check_callback prevents function: ' + chk, 'data' : JSON.stringify({ 'chk' : chk, 'pos' : pos, 'obj' : obj && obj.id ? obj.id : false, 'par' : par && par.id ? par.id : false }) };
 				return false;
 			}
 			return true;
@@ -62927,7 +62927,7 @@ $.notifyDefaults({
 		 * changes the theme
 		 * @name set_theme(theme_name [, theme_url])
 		 * @param {String} theme_name the name of the new theme to apply
-		 * @param {mixed} theme_url  the location of the CSS file for this theme. Omit or set to `false` if you manually included the file. Set to `true` to autoload from the `core.themes.dir` directory.
+		 * @param {mixed} theme_url  the location of the CSS file for this theme. Omit or set to `false` if you manually included the file. Set to `true` to autoload from the `website.themes.dir` directory.
 		 * @trigger set_theme.jstree
 		 */
 		set_theme : function (theme_name, theme_url) {
@@ -63504,7 +63504,7 @@ $.notifyDefaults({
 
 							// apply down
 							if(s.indexOf('down') !== -1) {
-								//this._data[ t ? 'core' : 'checkbox' ].selected = $.vakata.array_unique(this._data[ t ? 'core' : 'checkbox' ].selected.concat(obj.children_d));
+								//this._data[ t ? 'website' : 'checkbox' ].selected = $.vakata.array_unique(this._data[ t ? 'website' : 'checkbox' ].selected.concat(obj.children_d));
 								var selectedIds = this._cascade_new_checked_state(obj.id, true);
                                 obj.children_d.concat(obj.id).forEach(function(id) {
                                     if (selectedIds.indexOf(id) > -1) {
@@ -63526,7 +63526,7 @@ $.notifyDefaults({
 									if(c === j) {
 										par.state[ t ? 'selected' : 'checked' ] = true;
 										sel[par.id] = true;
-										//this._data[ t ? 'core' : 'checkbox' ].selected.push(par.id);
+										//this._data[ t ? 'website' : 'checkbox' ].selected.push(par.id);
 										tmp = this.get_node(par, true);
 										if(tmp && tmp.length) {
 											tmp.attr('aria-selected', true).children('.jstree-anchor').addClass(t ? 'jstree-clicked' : 'jstree-checked');
@@ -66739,7 +66739,7 @@ $.notifyDefaults({
 						this.hide_dots();
 					}, this))
 				.on("init.jstree loading.jstree ready.jstree", $.proxy(function () {
-						//div.style.height = this._data.core.li_height + 'px';
+						//div.style.height = this._data.website.li_height + 'px';
 						this.get_container_ul().addClass('jstree-wholerow-ul');
 					}, this))
 				.on("deselect_all.jstree", $.proxy(function (e, data) {
@@ -66814,7 +66814,7 @@ $.notifyDefaults({
 			obj = parent.redraw_node.apply(this, arguments);
 			if(obj) {
 				var tmp = div.cloneNode(true);
-				//tmp.style.height = this._data.core.li_height + 'px';
+				//tmp.style.height = this._data.website.li_height + 'px';
 				if($.inArray(obj.id, this._data.core.selected) !== -1) { tmp.className += ' jstree-wholerow-clicked'; }
 				if(this._data.core.focused && this._data.core.focused === obj.id) { tmp.className += ' jstree-wholerow-hovered'; }
 				obj.insertBefore(tmp, obj.childNodes[0]);
@@ -77119,7 +77119,7 @@ Licensed under the BSD-2-Clause License.
  * https://raw.githubusercontent.com/gionkunz/chartist-js/master/LICENSE-MIT
  */
 /**
- * The core module of Chartist that is mainly providing static functions and higher level functions for chart modules.
+ * The website module of Chartist that is mainly providing static functions and higher level functions for chart modules.
  *
  * @module Chartist.Core
  */
@@ -77548,7 +77548,7 @@ var Chartist = {
    */
   Chartist.getDataArray = function(data, reverse, multi) {
     // Recursively walks through nested arrays and convert string values to numbers and objects with value properties
-    // to values. Check the tests in data core -> data normalization for a detailed specification of expected values
+    // to values. Check the tests in data website -> data normalization for a detailed specification of expected values
     function recursiveConvert(value) {
       if(Chartist.safeHasProperty(value, 'value')) {
         // We are dealing with value object notation so we need to recurse on value property
@@ -87747,7 +87747,7 @@ require(48)(Chart);
 require(49)(Chart);
 
 // Controllers must be loaded after elements
-// See Chart.core.datasetController.dataElementType
+// See Chart.website.datasetController.dataElementType
 require(15)(Chart);
 require(16)(Chart);
 require(17)(Chart);

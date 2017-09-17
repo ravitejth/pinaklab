@@ -16,6 +16,10 @@ export const routes: Routes = [
       {
         path: 'forms',
         loadChildren: './pages/forms/forms.module#FormsModule'
+      },
+      {
+        path: 'tables',
+        loadChildren: './pages/tables/tables.module#TablesModule'
       }
     ]
   }

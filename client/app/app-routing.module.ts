@@ -9,7 +9,7 @@ import { NotFoundComponent }  from '../shared/components/not-found/not-found.com
 export const routes: Routes = [
   {
     path: '',
-    loadChildren: './../core/core.module#CoreModule'
+    loadChildren: './../website/website.module#WebsiteModule'
   },
   {
     path: 'dashboard',
