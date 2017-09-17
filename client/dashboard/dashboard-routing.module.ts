@@ -20,6 +20,10 @@ export const routes: Routes = [
       {
         path: 'tables',
         loadChildren: './pages/tables/tables.module#TablesModule'
+      },
+      {
+        path: 'schema-form',
+        loadChildren: './pages/schema-form/schema-form.module#SchemaFormModule'
       }
     ]
   }

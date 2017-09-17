@@ -26,7 +26,7 @@ export class AsideNavComponent implements OnInit, AfterViewInit {
     menus = [
       {
         "name": "Components",
-        "url": "",
+        "url": "#",
         "items": [
           {
             "name": "Forms",
@@ -39,30 +39,12 @@ export class AsideNavComponent implements OnInit, AfterViewInit {
         ]
       },
       {
-        "name": "Menu Item Two",
-        "url": "/dashboard/menu1",
+        "name": "Custom",
+        "url": "#",
         "items": [
           {
-            "name": "Submenu Item One",
-            "url": "/dashboard/menu1/submenu1",
-          },
-          {
-            "name": "Submenu Item Two",
-            "url": "/dashboard/menu1/submenu2",
-          }
-        ]
-      },
-      {
-        "name": "Menu Item Two",
-        "url": "/dashboard/menu1",
-        "items": [
-          {
-            "name": "Submenu Item One",
-            "url": "/dashboard/menu2/submenu1",
-          },
-          {
-            "name": "Submenu Item Two",
-            "url": "/dashboard/menu2/submenu2",
+            "name": "Schema Form",
+            "url": "/dashboard/schema-form",
           }
         ]
       }
