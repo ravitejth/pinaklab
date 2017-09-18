@@ -1,1 +1,82 @@
-sf-form([schema]="loginForm")
+// BEGIN: Subheader
+.m-subheader
+  .d-flex.align-items-center
+    .mr-auto
+      h3.m-subheader__title.m-subheader__title--separator Custom Forms
+      ul.m-subheader__breadcrumbs.m-nav.m-nav--inline
+        li.m-nav__item.m-nav__item--home
+          a.m-nav__link.m-nav__link--icon(href='#')
+            i.m-nav__link-icon.la.la-home
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Forms
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Form Layouts
+        li.m-nav__separator -
+        li.m-nav__item
+          a.m-nav__link(href='')
+            span.m-nav__link-text Default Forms
+    div
+      .m-dropdown.m-dropdown--inline.m-dropdown--arrow.m-dropdown--align-right.m-dropdown--align-push(data-dropdown-toggle='hover', aria-expanded='true')
+        a.m-portlet__nav-link.btn.btn-lg.btn-secondary.m-btn.m-btn--outline-2x.m-btn--air.m-btn--icon.m-btn--icon-only.m-btn--pill.m-dropdown__toggle(href='#')
+          i.la.la-plus.m--hide
+          i.la.la-ellipsis-h
+        .m-dropdown__wrapper
+          span.m-dropdown__arrow.m-dropdown__arrow--right.m-dropdown__arrow--adjust
+          .m-dropdown__inner
+            .m-dropdown__body
+              .m-dropdown__content
+                ul.m-nav
+                  li.m-nav__section.m-nav__section--first.m--hide
+                    span.m-nav__section-text Quick Actions
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-share
+                      span.m-nav__link-text Activity
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-chat-1
+                      span.m-nav__link-text Messages
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-info
+                      span.m-nav__link-text FAQ
+                  li.m-nav__item
+                    a.m-nav__link(href='')
+                      i.m-nav__link-icon.flaticon-lifebuoy
+                      span.m-nav__link-text Support
+                  li.m-nav__separator.m-nav__separator--fit
+                  li.m-nav__item
+                    a.btn.btn-outline-danger.m-btn.m-btn--pill.m-btn--wide.btn-sm(href='#') Submit
+// END: Subheader
+
+.m-content
+  .row
+    .col-lg-6
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Default Form Layout
+        // begin::Form
+        sf-form([schema]="loginForm", [actions]="loginFormActions")
+        // end::Form
+      // end::Portlet
+    .col-lg-6
+      // begin::Portlet
+      .m-portlet
+        .m-portlet__head
+          .m-portlet__head-caption
+            .m-portlet__head-title
+              span.m-portlet__head-icon.m--hide
+                i.la.la-gear
+              h3.m-portlet__head-text Default Form Layout
+        // begin::Form
+        sf-form([model]="model", [schema]="schema", [validators]="validators", (onChange)="val=$event.value")
+        pre {{val | json}}

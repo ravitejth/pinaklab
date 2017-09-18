@@ -1,0 +1,7 @@
+button.btn.btn-default.wizardBtn((click)='previousPage()', [attr.disabled]='!hasPreviousPage()?true:null')  Previous
+.wizardContent
+  span(*ngFor='let fieldset of schema.fieldsets; let i=index')
+    fieldset(*ngIf='currentPage === i')
+      legend(*ngIf='fieldset.title') {{fieldset.title}}
+      sf-form-element(*ngFor='let fieldId of fieldset.fields', [formProperty]='formProperty.getProperty(fieldId)')
+button.btn.btn-default.wizardBtn((click)='nextPage()', [attr.disabled]='!hasNextPage()?true:null')  Next

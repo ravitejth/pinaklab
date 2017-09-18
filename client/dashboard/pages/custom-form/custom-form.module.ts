@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { LayoutModule } from '../../layouts/layout.module';
 import { PagesComponent } from '../pages.component';
 import { CustomFormComponent } from './custom-form.component';
+import { WizardWidget } from  './widget/wizard.widget';
 
 import { SchemaFormModule, WidgetRegistry, DefaultWidgetRegistry } from "angular2-schema-form";
 
@@ -28,11 +29,17 @@ const routes: Routes = [
     LayoutModule
   ],
   declarations: [
-    CustomFormComponent
+    CustomFormComponent,
+    WizardWidget
   ],
+  entryComponents: [ WizardWidget ],
   exports: [
     RouterModule
   ], providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}]
 })
 
-export class CustomFormModule {}
+export class CustomFormModule {
+  constructor(widgetRegistry: WidgetRegistry) {
+    widgetRegistry.register('wizard', WizardWidget);
+  }
+}
