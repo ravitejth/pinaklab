@@ -363,6 +363,14 @@ export class CustomFormComponent {
     this.validators['/student/id'] = this.validateId;
   }
 
+  /**
+   Available options...
+   string: string, search, tel, url, email, password, color, date, date-time, time, textarea, select, file, radio, richtext
+   number: number, integer, range
+   integer: integer, range
+   boolean: boolean, checkbox
+   */
+
   validateId(value, property, form) {
     if (value.length === 11) {
       let list = value.substr(0, 10).split('');
@@ -378,19 +386,43 @@ export class CustomFormComponent {
     "properties": {
       "name": {
         "type": "string",
+        "widget": "string",
         "description": "name",
         "placeholder": "John Doe"
       },
-      "email": {
+      "date": {
         "type": "string",
-        "description": "email",
-        "format": "email",
-        "placeholder": "you@email.com"
+        "description": "dob",
+        "widget": "date"
       },
       "sameAddress": {
         "type": "boolean",
         "default": false,
-        "description": "Choose yes or no"
+        "description": "Are you gay?"
+      },
+      "multipleSelect": {
+        "type": "object",
+        "properties": {
+          "cat": {
+            "type": "string",
+            "default": false,
+            "widget": "checkbox",
+            "description": "Cat"
+          },
+          "dog": {
+            "type": "string",
+            "widget": "checkbox",
+            "default": false,
+            "description": "Dog"
+          },
+          "mouse": {
+            "type": "string",
+            "widget": "checkbox",
+            "default": false,
+            "description": "Mouse"
+          }
+        },
+        "description": "Choose Animals"
       },
       "degree": {
         "type": "string",

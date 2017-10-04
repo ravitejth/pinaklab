@@ -6,7 +6,7 @@
     "start": "webpack-dev-server --hot --content-base ./dist --open --port 9000",
     "dev": "webpack-dev-server --hot --content-base ./dist --port 9000",
     "clean": "rimraf dist",
-    "build": "rimraf dist webpack --config config/webpack.prod.js --progress --profile --colors"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --colors"
   },
   "keywords": [],
   "author": "Ritesh Ranjan <ritesrnjn@gmail.com>",

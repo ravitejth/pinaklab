@@ -35,7 +35,10 @@ const routes: Routes = [
   entryComponents: [ WizardWidget ],
   exports: [
     RouterModule
-  ], providers: [{provide: WidgetRegistry, useClass: DefaultWidgetRegistry}]
+  ],
+  providers: [
+    {provide: WidgetRegistry, useClass: DefaultWidgetRegistry}
+  ]
 })
 
 export class CustomFormModule {
