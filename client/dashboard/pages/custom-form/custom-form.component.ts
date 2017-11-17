@@ -386,7 +386,7 @@ export class CustomFormComponent {
     "properties": {
       "name": {
         "type": "string",
-        "widget": "string",
+        "widget": "customtextbox",
         "description": "name",
         "placeholder": "John Doe"
       },
@@ -398,7 +398,7 @@ export class CustomFormComponent {
       "sameAddress": {
         "type": "boolean",
         "default": false,
-        "description": "Are you gay?"
+        "description": "Is same address?"
       },
       "multipleSelect": {
         "type": "object",

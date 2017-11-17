@@ -65,7 +65,8 @@
                 i.la.la-gear
               h3.m-portlet__head-text Default Form Layout
         // begin::Form
-        sf-form([schema]="loginForm", [actions]="loginFormActions")
+        sf-form([schema]="loginForm", [actions]="loginFormActions", (onChange)="val1=$event.value")
+        pre {{val1 | json}}
         // end::Form
       // end::Portlet
     .col-lg-6

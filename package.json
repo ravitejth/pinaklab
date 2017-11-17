@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Start angular appliacation with webpack, pug, scss.",
   "scripts": {
-    "start": "webpack-dev-server --hot --content-base ./dist --open --port 9000",
-    "dev": "webpack-dev-server --hot --content-base ./dist --port 9000",
+    "start": "webpack-dev-server --hot --content-base ./dist --port 9000",
     "clean": "rimraf dist",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --colors"
   },
