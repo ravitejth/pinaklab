@@ -23,7 +23,11 @@ export const routes: Routes = [{
   children: [
     {
       path: '',
-      children: [{
+      children: [        {
+        path: '',
+        component: HeaderComponent,
+        outlet: 'Header',
+      },{
         path: '',
         component: HomeComponent
       }, {

@@ -3,7 +3,7 @@
 // Styling for the navbar
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
-  background: #2c3e50;
+  background: white;
   @include sans-serif-font;
   @include transition-all;
   .navbar-brand {
@@ -45,7 +45,7 @@
   }
   @media (min-width: 992px) {
     border-color: rgba(34, 34, 34, 0.05);
-    background: #2c3e50;
+    background: white;
     .navbar-brand {
       color: fade-out(white, .3);
       &:focus,
@@ -200,4 +200,38 @@
   color: rgba(255, 255, 255, 0.7);
   font-size: 16px;
   margin-bottom: 50px;
+}
+.logo {
+  cursor: pointer;
+  float: left;
+  width: 180px;
+  height: 65px;
+  background-image: url('../../../public/img/logo.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.background-white{
+  background: white !important;
+}
+#mainNav .navbar-nav > li.nav-item > a {
+  color: #373737 !important;
+}
+#mainNav .navbar-nav > li.nav-item > a:hover {
+  color: #D32F2F !important;
+  background: none;
+}
+#mainNav .navbar-nav > li.nav-item.active >  a {
+  color: #D32F2F !important;
+  background: none;
+  font-weight: bold !important;
+}
+li {
+  cursor: pointer;
+  margin-right: 10px;
+}
+a {
+  font-size: 16px !important;
+  font-family: Roboto !important;
+  font-weight: normal !important;
 }
