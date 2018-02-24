@@ -1,0 +1,111 @@
+h1 {
+  color: #336699;
+}
+.background{
+  background-color: #f4f4f4;
+}
+.card{
+  border: none;
+  border-radius: 0px;
+  margin-bottom: 30px;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+h2 {
+  color: #888888;
+}
+.margins {
+  padding: 10px 10px;
+}
+.mini-card{
+  border: none;
+  border-radius: 2px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+  margin-left: 12%;
+  box-shadow: 2px 2px 2px 2px #888888;
+}
+.thumb {
+  background-color: #54D6B7;
+  height: 50px;
+  width: 50px;
+  float: left;
+  border-radius: 3px;
+}
+.f-left {
+  float: left;
+  padding-left: 10%;
+  padding-top: 2%;
+  font-size: 20px;
+}
+.card-height{
+  height: 70px;
+}
+.vid {
+  background: #253340 url('../../../public/img/youtube.png');
+  height:140px;
+  width: 225px;
+  background-size: cover;
+  margin: 10px 20px 10px 10px;
+}
+.margin-40 {
+  margin-left: 40px;
+}
+.pic {
+  background: #253340 url('../../../public/img/disha.jpg');
+  height:140px;
+  width: 225px;
+  background-size: cover;
+  margin: 10px 20px 10px 10px;
+}
+.showreel {
+  background: #253340 url('../../../public/img/youtube.png');
+  height: 300px;
+  width: 500px;
+  float: left;
+  background-size: cover;
+  margin: 10px 20px 20px 35px;
+}
+.allign {
+  float: left;
+  width: 42%;
+  font-weight: normal;
+  margin: 80px 10px 10px 10px;
+}
+.bar {
+  background-color: #54D6B7;
+  height: 25px;
+}
+.dp {
+  background: #253340 url('../../../public/img/kriti.jpg');
+  height:180px;
+  width: 180px;
+  float: left;
+  background-size: cover;
+  margin: 25px 10px 25px 25px;
+}
+.left-div {
+  float: left;
+  width: 24%;
+}
+.right-div {
+  float: left;
+  width: 72%;
+}
+.desc {
+  font-weight: normal;
+  margin: 20px 0px 10px 30px;
+}
+.align-desc {
+  float: left;
+  color: #888888;
+  margin: 0px 0px 20px 25px;
+}
+.no-margin {
+  margin-bottom: 0px;
+}
+.fields {
+  height: 30px;
+  width: 300px;
+  float: left;
+  margin: 10px 0px 0px 30px;
+}

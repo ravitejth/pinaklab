@@ -1,4 +1,5 @@
-import { NgModule }      from '@angular/core';
+import { NgModule }       from '@angular/core';
+import {CommonModule}     from '@angular/common';
 
 //COMPONENTS
 import { WebsiteComponent }     from './website.component';
@@ -7,6 +8,7 @@ import { FooterComponent }      from './footer/footer.component';
 import { HomeHeaderComponent }  from './home/home-header/home-header.component';
 import { HomeComponent }        from './home/home.component';
 import { AboutComponent }       from './about/about.component';
+import { ProfileComponent}      from './profile/profile.component';
 import { ServicesComponent }    from './services/services.component';
 import { PortfolioComponent }   from './portfolio/portfolio.component';
 import { ContactComponent }     from './contact/contact.component';
@@ -21,7 +23,8 @@ import { SharedModule } from '../shared/shared.module';
 @NgModule({
     imports: [
       WebsiteRoutingModule,
-      SharedModule
+      SharedModule,
+      CommonModule
     ],
     declarations: [
       WebsiteComponent,
@@ -32,7 +35,8 @@ import { SharedModule } from '../shared/shared.module';
       HomeComponent,
       ServicesComponent,
       PortfolioComponent,
-      ContactComponent
+      ContactComponent,
+      ProfileComponent
     ]
 })
 

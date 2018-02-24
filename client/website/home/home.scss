@@ -1,1 +1,33 @@
-
+.headline-bg {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    height: 750px;
+    background: #253340 url('../../../public/img/banner.jpg') no-repeat 50% top;
+    background-size: cover;
+}
+.home-margin-top{
+    margin-top: 20%;
+    margin-left: 4%;
+}
+.title{
+    font-size: 45px;
+    font-weight: normal;
+    // font-family: Roboto;
+    color: white;
+}
+.intro{
+    font-size: 18px;
+    // font-family: Roboto;
+    color: white;
+}
+.white-button{
+    font-size: 20px;
+    background: white;
+    border: none;
+    padding: 14px 45px;
+    margin-right: 10px;
+    border-radius: 6px;
+}

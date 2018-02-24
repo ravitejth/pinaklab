@@ -6,3 +6,7 @@ $fa-font-path: "~font-awesome/fonts";
 //== Loading
 @import "loading";
 
+html *
+{
+   font-family: Roboto;
+}

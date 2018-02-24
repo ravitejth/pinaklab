@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { WebsiteComponent }   from './website.component';
 import { HomeComponent }      from './home/home.component';
 import { AboutComponent }     from './about/about.component';
+import { ProfileComponent}    from './profile/profile.component';
 import { ServicesComponent }  from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent }   from './contact/contact.component';
@@ -46,6 +47,22 @@ export const routes: Routes = [{
         }, {
           path: '',
           component: AboutComponent
+        }, {
+          path: '',
+          component: FooterComponent,
+          outlet: 'Footer',
+        }]
+      },
+      {
+      path: 'profile',
+      children: [
+        {
+          path: '',
+          component: HeaderComponent,
+          outlet: 'Header',
+        }, {
+          path: '',
+          component: ProfileComponent
         }, {
           path: '',
           component: FooterComponent,

@@ -1,0 +1,70 @@
+section#profile.background
+  .container
+    .row
+      .col-md-12
+        .card
+          .bar
+          div
+            .left-div
+              .dp
+              .align-desc
+                h2 Kriti Kharabanda
+                p.no-margin Singer, Female
+                p.no-margin New Delhi
+            .right-div
+              p.desc Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                | when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                | It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+                | essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                | Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including 
+                | versions of Lorem Ipsum.
+              div
+                p.fields(*ngFor="let item of arr;") Field 1: Data 1
+      .col-md-12
+        .card
+          .margins
+            h2 Showreel
+            div
+              .showreel
+              p.allign Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                | Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                | when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+      .col-md-12
+        .card
+          .margins
+            h2 Portfolio Pictures
+            .row.margin-40
+              div(*ngFor="let item of arr;")
+                .pic
+
+      .col-md-12
+        .card
+          .margins
+            h2 Portfolio Videos
+            .row.margin-40
+              div(*ngFor="let item of arr;")
+                .vid
+
+      .col-md-12
+        .card
+          .margins
+            h2 Achivements
+            .row
+              .mini-card.col-md-4
+                .margins.card-height
+                  .thumb
+                  p.f-left Achievements
+              .mini-card.col-md-4
+                .margins.card-height
+                  .thumb
+                  p.f-left Achievements
+              .mini-card.col-md-4
+                .margins.card-height
+                  .thumb
+                  p.f-left Achievements
+              .mini-card.col-md-4
+                .margins.card-height
+                  .thumb
+                  p.f-left Achievements
