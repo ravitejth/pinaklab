@@ -8,6 +8,7 @@ import { HomeComponent }      from './home/home.component';
 import { AboutComponent }     from './about/about.component';
 import { ProfileComponent}    from './profile/profile.component';
 import { ActorComponent}      from './actor/actor.component';
+import { ListComponent}       from './list/list.component';
 import { ServicesComponent }  from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent }   from './contact/contact.component';
@@ -80,6 +81,22 @@ export const routes: Routes = [{
         }, {
           path: '',
           component: ActorComponent
+        }, {
+          path: '',
+          component: FooterComponent,
+          outlet: 'Footer',
+        }]
+      },
+      {
+      path: 'list',
+      children: [
+        {
+          path: '',
+          component: HeaderComponent,
+          outlet: 'Header',
+        }, {
+          path: '',
+          component: ListComponent
         }, {
           path: '',
           component: FooterComponent,
