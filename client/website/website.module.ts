@@ -7,9 +7,9 @@ import { HeaderComponent }      from './header/header.component'
 import { FooterComponent }      from './footer/footer.component';
 import { HomeHeaderComponent }  from './home/home-header/home-header.component';
 import { HomeComponent }        from './home/home.component';
-import { MainComponent }        from './home/main/main';
 import { AboutComponent }       from './about/about.component';
 import { ProfileComponent}      from './profile/profile.component';
+import { ActorComponent}        from './actor/actor.component';
 import { ServicesComponent }    from './services/services.component';
 import { PortfolioComponent }   from './portfolio/portfolio.component';
 import { ContactComponent }     from './contact/contact.component';
@@ -39,7 +39,7 @@ import { SharedModule } from '../shared/shared.module';
       PortfolioComponent,
       ContactComponent,
       ProfileComponent,
-      MainComponent
+      ActorComponent
     ]
 })
 
