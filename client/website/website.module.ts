@@ -22,11 +22,27 @@ import { WebsiteRoutingModule } from './website-routing.module';
 // SHARED MODULE
 import { SharedModule } from '../shared/shared.module';
 
+// Imports
+import { SocialLoginModule, AuthServiceConfig } from 'angular4-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angular4-social-login';
+
+const config = new AuthServiceConfig([
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('158146734840456')
+  },
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('410008417850-rigp3nriv01hf7r5c4t7qc7kfgu09jf0.apps.googleusercontent.com')
+  }
+  ]);
+
 @NgModule({
     imports: [
       WebsiteRoutingModule,
       SharedModule,
-      CommonModule
+      CommonModule,
+      SocialLoginModule.initialize(config)
     ],
     declarations: [
       WebsiteComponent,

@@ -1,13 +1,13 @@
 .headline-bg
-  .home-margin-top
-    .title Welcome to PinakLab.
-    p.intro We provide you an exclusive stage to showcase your talent
-      br
-      | so that you can make an everlasting impression.
+.home-margin-top
+  .title Welcome to PinakLab.
+  p.intro We provide you an exclusive stage to showcase your talent
+    br
+    | so that you can make an everlasting impression.
 
-    div
-      button.white-button Sign In
-      button.white-button Sign Up
+  div
+    button.white-button(type='button', data-toggle='modal', data-target='#signIn') Sign In
+    button.white-button(type='button', data-toggle='modal', data-target='#signUp') Sign Up
 .bg_margin
 .container.grey_bg
   h1 How Can PinakLab Help You?
@@ -90,3 +90,83 @@
         .btn-pos
           button.btn.btn-danger.btn-style(type='button') Search
           
+// Modals
+#signIn.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+  .modal-dialog.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        .modal-title.title-style Login to PinakLab
+      .modal-body
+        .form-box-inner
+          .row
+            .form-container.col-md-6
+              form.login-form
+
+                .input-wrapper
+                  input#login-email.form-control.login-email(type='email', placeholder='Email or username')
+                  label.fa.fa-user.input-icon(for='login-email')
+
+                .input-wrapper
+                  input#login-password.form-control.login-password(type='password', placeholder='Password')
+                  label.fa.fa-lock.input-icon(for='login-password')
+
+                p
+                  a.forgot-password(href='#') Forgot password?
+
+                button.btn.btn-block.btn-login(type='submit') Log in
+                .checkbox.remember
+                  label
+                    input(type='checkbox')
+                    |  Remember me
+
+                p.lead
+                  | Don't have a Pinaklab account yet? 
+                  br
+                  a.signup-link(href='#', data-dismiss='modal', data-toggle='modal', data-target='#signUp') Create your account now
+
+            .col-md-1.divider
+
+            .col-md-5
+              .social-login
+                button.btn.btn-block.btn-fb(type='button')
+                  i.fa.fa-facebook
+                  |    Log in with Facebook
+                button.btn.btn-block.btn-gplus(type='button')
+                  i.fa.fa-google-plus
+                  |    Log in with Google
+
+#signUp.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+  .modal-dialog.modal-lg(role='document')
+    .modal-content
+      .modal-header
+        .modal-title.title-style Sign up now
+      .modal-body
+        .form-box
+          .input-wrapper
+            input#reg-name.form-control.login-email(type='text', placeholder='Name')
+            label.fa.fa-user.input-icon(for='reg-name')
+
+          .input-wrapper
+            input#reg-phone.form-control.login-password(type='text', placeholder='Phone no')
+            label.fa.fa-mobile.input-icon(for='reg-phone')
+
+          .input-wrapper
+            input#reg-category.form-control.login-email(type='text', placeholder='Category')
+            label.fa.fa-bars.input-icon(for='reg-category')
+
+          .input-wrapper
+            input#reg-email.form-control.login-password(type='email', placeholder='Email')
+            label.fa.fa-at.input-icon(for='reg-email')
+
+          .input-wrapper
+            input#reg-pass.form-control.login-password(type='password', placeholder='Password')
+            label.fa.fa-lock.input-icon(for='reg-pass')
+
+          button.btn.btn-block.btn-register(type='submit') Sign up
+
+          p.pad-top
+            | By signing up, you agree to our terms of services and privacy policy. 
+            br
+            | Already have an account?
+            a.signup-link(href='#', data-dismiss='modal', data-toggle='modal', data-target='#signIn') Sign In
+      
